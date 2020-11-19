@@ -8,6 +8,9 @@ redirect_from:
   - /about.html
 ---
 
+<p align="center">
+  <img src="https://hzhou3.github.io/images/IMG-4695.JPG?raw=true" alt="Photo" style="width: 450px;"/> 
+</p>
 
 Profile
 ======
