@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Lantao Yu"
+title                    : "Hao Zhou"
 title_separator          : "-"
-name                     : &name "Lantao Yu"
-description              : &description "Ph.D. student, Computer Science Department, Stanford University"
-url                      : https://lantaoyu.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : &name "Hao Zhou"
+description              : &description "Master student, Computer and Information Science Department, University of Mississippi"
+url                      : https://hzhou3.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "LantaoYu/lantaoyu.github.io"
+repository               : "hzhou3/hzhou3.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -77,13 +77,13 @@ analytics:
 
 # Site Author
 author:
-  name             : "Lantao Yu"
-  avatar           : "lantaoyu.jpg"
-  bio              : "Ph.D. student, Computer Science Department, Stanford University"
-  location         : "Stanford, California"
+  name             : "Hao Zhou"
+  avatar           : "IMG-5680.jpg"
+  bio              : "Master student, Computer and Information Science Department, University of Mississippi"
+  location         : "Oxford, Mississippi"
   employer         : 
-  googlescholar    : "https://scholar.google.com/citations?user=Ixg9n-EAAAAJ&hl=en"
-  email            : "lantaoyu@cs.stanford.edu"
+  googlescholar    : 
+  email            : "hzhou3@go.olemiss.edu"
   uri              : 
   bitbucket        :
   codepen          :
@@ -91,7 +91,7 @@ author:
   flickr           :
   facebook         : 
   foursquare       :
-  github           : "LantaoYu"
+  github           : "hzhou3"
   google_plus      :
   keybase          :
   instagram        : 
@@ -100,7 +100,7 @@ author:
   orcid            : 
   pinterest        :
   soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  stackoverflow    : 
   steam            :
   tumblr           :
   twitter          : 

@@ -1,10 +1,13 @@
 # main links links
 main:
-  - title: "CV/Bio"
-    url: /files/lantaoyu_cv.pdf
+  - title: "Resume"
+    url: /files/resume.pdf
 
   - title: "Publications"
     url: /publications/
+
+  # - title: "Projects"
+  #   url: /Projects/
 
   # - title: "Awards & Honors"
   #   url: /awards/
