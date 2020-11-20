@@ -18,6 +18,7 @@ Profile
 * My research interests are GPGPU, ML, and CV.
 * I received my bachelor's degrees at University of Mississippi and North China University of Technology, and my undergraduate research advisors is [Prof. H. Conrad Cunningham](https://john.cs.olemiss.edu/~hcc/).
 
+<br>
 Awards & Honors
 ======
 * Summa Cum Laude, University of Mississippi
