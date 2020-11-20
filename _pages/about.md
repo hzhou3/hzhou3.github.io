@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Hao Zhou 周浩"
+title: ""
 excerpt: "About me"
 author_profile: true
 redirect_from: 

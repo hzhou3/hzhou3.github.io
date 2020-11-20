@@ -1,16 +1,10 @@
 ---
-layout: archive
-title: "Publications"
+title: ""
 permalink: /publications/
 author_profile: true
 ---
+<br>
+<b>[Exploring Faster RCNN for Fabric Defect Detection](http://hzhou3.com/publications/faster)</b> <br> 
+<b>Hao Zhou</b>, Byunghyun Jang, Yixin Chen, and David Troendle
+<i>2020 Third International Conference on Artificial Intelligence for Industries</i>. <b>AI4I 2020</b>.
 
-{% if author.googlescholar %}
-  You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
-{% endif %}
-
-{% include base_path %}
-
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
-{% endfor %}
