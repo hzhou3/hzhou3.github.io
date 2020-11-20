@@ -3,7 +3,7 @@ title: "Exploring Faster RCNN for Fabric Defect Detection"
 collection: publications
 permalink: /publications/faster
 venue: "The Third International Conference on Artificial Intelligence for Industries (AI4I 2020)"
-date: 2020-11
+date: 2020-11-10
 citation: '<b>Hao Zhou</b>, Byunghyun Jang, Yixin Chen, and David Troendle. <i>The Third International Conference on Artificial Intelligence for Industries</i>. <b>AI4I 2020</b>.'
 ---
 
