@@ -1,14 +1,14 @@
 # main links links
 main:
 
-  - title: "Resume"
-    url: /files/resume.pdf
-
   - title: "Publications"
     url: /publications/
 
-  - title: "Contact"
-    url: /contact/
+  - title: "Resume"
+    url: /files/resume.pdf
 
   - title: "Projects"
     url: /projects/
+
+  - title: "Contact"
+    url: /contact/

@@ -22,6 +22,6 @@ Awards
 ======
 * Summa Cum Laude, University of Mississippi
 * International Undergraduate Student Scholarship, University of Mississippi
-* National Scholarship for Exchange Student
+* National Scholarship for Exchange Student, Beijing
 * National Scholarship, Ministry of Education of the People’s Republic of China
 * Outstanding Freshmen, North China University of Technology
