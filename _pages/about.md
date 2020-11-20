@@ -15,7 +15,7 @@ redirect_from:
 Profile
 ======
 * I am a master student in Computer & Information Science at University of Mississippi, advised by [Prof. Byunghyun Jang](https://john.cs.olemiss.edu/~bjang/).
-* My research interests are GPGPU, ML, and CV.
+* My research interests are GPU computing (GPGPU), CPU-GPU heterogeneous computing, Machine Learning and Computer Vision applications powered by GPGPU.
 * I received my bachelor's degrees at University of Mississippi and North China University of Technology, and my undergraduate research advisors is [Prof. H. Conrad Cunningham](https://john.cs.olemiss.edu/~hcc/).
 
 
