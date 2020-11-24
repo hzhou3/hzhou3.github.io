@@ -12,7 +12,7 @@ redirect_from:
   <img src="https://hzhou3.github.io/images/IMG-4695.JPG?raw=true" alt="Photo" style="width: 450px;"/> 
 </p>
 
-Profile
+About Me
 ======
 * I am a master student in Computer & Information Science at University of Mississippi, advised by [Prof. Byunghyun Jang](https://john.cs.olemiss.edu/~bjang/).
 * My research interests are GPU computing (GPGPU), CPU-GPU heterogeneous computing, Machine Learning and Computer Vision applications powered by GPGPU.
