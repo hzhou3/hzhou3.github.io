@@ -1,9 +1,9 @@
 ---
 title: "Simple BlockChain - BlockChain"
-collection: projects
-permalink: /projects/blockchain
+collection: publications
+permalink: /publications/blockchain
 venue: 
-date: 
+date: 2019-09-01
 citation:
 ---
 

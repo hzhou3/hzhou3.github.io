@@ -1,9 +1,9 @@
 ---
 title: "Concurrent Data Structure - Hash Table"
-collection: projects
-permalink: /projects/hash
+collection: publications
+permalink: /publications/hash
 venue: 
-date: 
+date: 2020-10-01
 citation:
 ---
 

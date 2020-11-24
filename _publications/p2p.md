@@ -1,10 +1,10 @@
 ---
 title: "A BitTorrent-like peer-to-peer based file sharing prototype system
  - Computer Networks"
-collection: projects
-permalink: /projects/p2p
+collection: publications
+permalink: /publications/p2p
 venue: 
-date: 
+date: 2019-09-01
 citation:
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: "Text Classfication - Machine Learning"
-collection: projects
-permalink: /projects/text
+collection: publications
+permalink: /publications/text
 venue: 
-date: 
+date: 2020-09-01
 citation:
 ---
 

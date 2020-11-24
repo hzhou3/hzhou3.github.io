@@ -1,9 +1,9 @@
 ---
 title: "Generate Intermediate representation - Compiler"
-collection: projects
-permalink: /projects/compiler
+collection: publications
+permalink: /publications/compiler
 venue: 
-date: 
+date: 2020-09-01
 citation:
 ---
 

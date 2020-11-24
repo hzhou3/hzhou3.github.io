@@ -1,9 +1,9 @@
 ---
 title: "One Class Model for Fabric Defect Detection"
-collection: projects
-permalink: /projects/oneclass
+collection: publications
+permalink: /publications/oneclass
 venue: 
-date: 
+date: 2020-06-01
 citation:
 ---
 
