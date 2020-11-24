@@ -8,7 +8,7 @@ citation:
 ---
 
 ## Description
-Design a concurrent hash table on GPU using CUDA. In this project, a chaining design used to solve conflicts.
+Design a concurrent hash table on GPU using CUDA. In this project, a chaining design is used to solve conflicts.
 
 ## What Done
 
