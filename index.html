@@ -72,13 +72,15 @@
 </head>
 
 <body>
-  <table width="840" border="0" align="center" border="0" cellspacing="0" cellpadding="20">
+  <!-- <table width="1080" border="0" align="center" border="0" cellspacing="0" cellpadding="20"> -->
+    <table style="width:100%;max-width:1080px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tr>
       <td>
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-            <p align="center"><font size="6px">Hao Zhou 周浩</font> <br>hfz5190@psu.edu</p>
+            
             <tr>
             <td width="67%" valign="middle" align="justify">
+              <p align="center"><font size="6px">Hao Zhou 周浩</font> <br>hfz5190@psu.edu</p>
               <p>
                 I am a second-year Ph.D. student at PennState, advised by <a href="https://www.cse.psu.edu/~mkg31/">Prof. Mahanth Gowda</a>. Before starting my Ph.D. life, I recieved my M.S. and B.S. in Computer & Information Science at the University of Mississippi, advised by <a href="https://john.cs.olemiss.edu/~bjang/">Prof. Byunghyun Jang</a> and <a href="https://john.cs.olemiss.edu/~hcc/">Prof. H. Conrad Cunningham</a> respectively. 
               </p>
@@ -103,10 +105,47 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+        <table width="100%" align="right" border="0" cellspacing="0" cellpadding="20" style="border-collapse: collapse; margin-top:10px">
+          <tr style="border-bottom: 2px solid rgb(192, 192, 192)">
+          <td width="100%" valign="top" align="middle">
+            <a href="#highlights"><big><b>Highlights</b></big></a> &emsp;<span>&#183;</span>&emsp;
+            <a href="#publications"><big><b>Publications</b></big></a> &emsp;<span>&#183;</span>&emsp;
+            <a href="#award"><big><b>Awards & Honors</b></big></a>
+            </td>
+          </td>
+          </td>
+          </tr>
+        </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!--<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">-->
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
         <tr><td>
-            <h2>News</h2>
+          <div id="highlights" style="width: 100%; margin-top: 10px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; display: inline-block"></div>
+            <h2>Highlights</h2>
                     <ul>
                        <li><span> [2022-04] ssLOTR is accepted to IMWUT 2022.</span></li>
                        <li><span> [2021-10] DACHash won the <strong>Best Paper Award</strong>.</span></li>
@@ -118,13 +157,16 @@
                     </ul>
 		    </td></tr>
 
+      </table>
 
 
 
 
-    <!--<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">-->
+
+
+    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <!--<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">-->
-
+         <div id="publications" style="width: 100%; margin-top: 10px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; display: inline-block"></div>
         <tr><td>
             <h2>Publications</h2>
 		  </td></tr>
@@ -148,7 +190,7 @@
                 
                 <a href="javascript:toggleblock('sslotr_abs')">abstract</a> / 
                 <!--<a shape="rect" href="javascript:togglebib('sslotr')" class="togglebib">bibtex</a> / -->
-                <a href="sslotr.bib" target="_blank">bibtex</a> / 
+                <a href="https://raw.githubusercontent.com/hzhou3/hzhou3.github.io/main/bib/sslotr.bib">bibtex</a> / 
                 <a href="https://github.com/hzhou3/ssLOTR">code</a> 
 		      
                 <p align="justify"> <i id="sslotr_abs">This paper presents ssLOTR (self-supervised learning on the rings), a system that shows the feasibility of designing self-supervised learning based techniques for 3D finger motion tracking using a custom-designed wearable inertial measurement unit (IMU) sensor with a minimal overhead of labeled training data. Ubiquitous finger motion tracking enables a number of applications in augmented and virtual reality, sign language recognition, rehabilitation healthcare, sports analytics, etc. However, unlike vision, there are no large-scale training datasets for developing robust machine learning (ML) models on wearable devices. ssLOTR designs ML models based on data augmentation and self-supervised learning to first extract efficient representations from raw IMU data without the need for any training labels. The extracted representations are further trained with small-scale labeled training data. In comparison to fully supervised learning, we show that only 15% of labeled training data is sufficient with self-supervised learning to achieve similar accuracy. Our sensor device is designed using a two-layer printed circuit board (PCB) to minimize the footprint and uses a combination of Polylactic acid (PLA) and Thermoplastic polyurethane (TPU) as housing materials for sturdiness and flexibility. It incorporates a system-on-chip (SoC) microcontroller with integrated WiFi/Bluetooth Low Energy (BLE) modules for real-time wireless communication, portability, and ubiquity. In contrast to gloves, our device is worn like rings on fingers, and therefore, does not impede dexterous finger motion. Extensive evaluation with 12 users depicts a 3D joint angle tracking accuracy of 9.07◦ (joint position accuracy of 6.55𝑚𝑚) with robustness to natural variation in sensor positions, wrist motion, etc, with low overhead in latency and power consumption on embedded platforms.</i></p>
@@ -183,7 +225,7 @@
                 
                 <a href="javascript:toggleblock('dachash_abs')">abstract</a> /
                 <!--<a shape="rect" href="javascript:togglebib('dachash')" class="togglebib">bibtex</a>-->
-                <a href="dachash.bib" target="_blank">bibtex</a> 
+                <a href="https://raw.githubusercontent.com/hzhou3/hzhou3.github.io/main/bib/dachash.bib">bibtex</a> 
           
                 <p align="justify"> <i id="dachash_abs">
                 GPU acceleration of hash tables in high-volume transaction applications such as computational geometry and bio-informatics are emerging. Recently, several hash table designs have been proposed on GPUs, but our analysis shows that they still do not adequately factor in several important aspects of a GPU’s execution environment, leaving large room for further optimization. To that end, we present a dynamic, cache-aware, concurrent hash table named DACHash. It is specifically designed to improve memory efficiency and reduce thread divergence on GPUs. We propose several novel techniques including a GPU-friendly data structure & sizing, a reorder algorithm, and dynamic thread-data mapping schemes that make the operations of hash table more amendable to GPU architecture. Testing DACHash on an NVIDIA GTX 3090 achieves a peak performance of 8.65 billion queries/second in static searching and 5.54 billion operations/second in concurrent operation execution. It outperforms the state-of-the-art SlabHash by 41.53% and 19.92% respectively. We also verify that our proposed technique improves L2 cache bandwidth and L2 cache hit rate by 9.18× and 2.68× respectively.</i></p>
@@ -224,7 +266,7 @@
                 
                 <a href="javascript:toggleblock('oneclass_abs')">abstract</a> /
                 <!--<a shape="rect" href="javascript:togglebib('oneclass')" class="togglebib">bibtex</a> /-->
-                <a href="oneclass.bib" target="_blank">bibtex</a> /
+                <a href="https://raw.githubusercontent.com/hzhou3/hzhou3.github.io/main/bib/oneclass.bib">bibtex</a> /
                 <a href="https://github.com/hzhou3/one-class-dataset" >dataset</a> 
           
                 <p align="justify"> <i id="oneclass_abs">
@@ -267,7 +309,7 @@
                 
                 <a href="javascript:toggleblock('fasterfdd_abs')">abstract</a> /
                 <!--<a shape="rect" href="javascript:togglebib('fasterfdd')" class="togglebib">bibtex</a>-->
-                <a href="fasterfdd.bib" target="_blank">bibtex</a>
+                <a href="https://raw.githubusercontent.com/hzhou3/hzhou3.github.io/main/bib/fasterfdd.bib" target="_blank">bibtex</a>
           
                 <p align="justify"> <i id="fasterfdd_abs">
                 This paper presents a fabric defect detection network (FabricNet) for automatic fabric defect detection. Our proposed FabricNet incorporates several effective techniques, such as Feature Pyramid Network (FPN), Deformable Convolution (DC) network, and Distance IoU Loss function, into vanilla Faster RCNN to improve the accuracy and speed of fabric defect detection. Our experiment shows that, when optimizations are combined, the FabricNet achieves 62.07% mAP and 97.37% AP50 on DAGM 2007 dataset, and an average prediction speed of 17 frames per second.
@@ -305,9 +347,9 @@
 
 
 
-
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
         <tr><td>
+          <div id="award" style="width: 100%; margin-top: 10px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; display: inline-block"></div>
             <h2>Awards & Honors</h2>
                     <ul>
                        <li><span> Best Paper Award, SBAC-PAD 2021</span></li>
@@ -329,7 +371,7 @@
 		<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
 		<tr><td>
 		<br>
-      <p align="right"><font size="2"><a href="http://www.cs.berkeley.edu/~barron/">Big shout out to Jon</a></font></p>
+      <p align="right"><font size="2">Last update on June 2, 2022 and <a href="http://www.cs.berkeley.edu/~barron/">big shout out to Jon</a></font></p>
     </td></tr>
     </table>
 
