@@ -7,7 +7,19 @@
 
 
 
-  <style type="text/css">
+
+
+<!--- for clickable headers -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style type="text/css">th, td { padding: 17px;} </style>
+<!--- for clickable headers -->
+
+<script type="text/javascript" src="js/hidebib.js"></script>
+
+
+<style type="text/css">
   a {
   color: #1772d0;
   text-decoration:none;
@@ -34,28 +46,22 @@
         font-size: 15px;
         font-weight: 700
   }
+</style>
 
 
-
-  </style>
-
-
-
-
-
-  <link rel="icon" type="image/png" href="images/hao2.jpeg">
-  <script type="text/javascript" src="js/hidebib.js"></script>
+<link rel="icon" type="image/png" href="images/hao2.jpeg">
 
 
 
 
-  <title>Hao Zhou</title>
-  <meta name="Hao Zhou's Homepage"http-equiv="Content-Type" content="Hao Zhou's Homepage">
 
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <script src='https://www.google.com/recaptcha/api.js'></script>
+<title>Hao Zhou</title>
+<meta name="Hao Zhou's Homepage"http-equiv="Content-Type" content="Hao Zhou's Homepage">
 
+<link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 
+<!--
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]//function(){
     (i[r].q=i[r].q//[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -64,17 +70,15 @@
     ga('create', 'UA-41102261-2', 'auto');
     ga('send', 'pageview');
 </script>
-
-
-
-
+-->
 
 
 <!---
+
 <style>
 #return_top {
   display: none;
-  position: fixed;
+  
   bottom: 20px;
   right: 30px;
   z-index: 99;
@@ -92,7 +96,9 @@
   background-color: #555;
 }
 </style>
+
 <button onclick="topFunction()" id="return_top" title="Return to top">Return to top</button>
+
 <script>
 //Get the button
 var mybutton = document.getElementById("return_top");
@@ -114,10 +120,21 @@ function topFunction() {
 --->
 
 
-
 </head>
 
+
 <body>
+  
+
+
+
+
+
+
+
+<!--bio-->
+
+
   <!-- <table width="1080" border="0" align="center" border="0" cellspacing="0" cellpadding="20"> -->
     <table style="width:100%;max-width:1080px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tr>
@@ -155,13 +172,7 @@ function topFunction() {
 
 
 
-
-
-
-
-
-
-
+<!--navigator-->
 
         <table width="100%" align="right" border="0" cellspacing="0" cellpadding="20" style="border-collapse: collapse; margin-top:10px">
           <tr style="border-bottom: 2px solid rgb(192, 192, 192)">
@@ -181,40 +192,50 @@ function topFunction() {
 
 
 
+<!--hightlights-->
 
 
-
-
+    <button style="border:0px transparent; background-color: transparent;outline:none;"type="button" class="collapsible" data-toggle="collapse" data-target="#highlights" id="highlights_button"><h3>Highlights</h3></button>
+    <div id="highlights" class="collapse in">
 
 
     <!--<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">-->
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
         <tr><td>
-          <div id="highlights" style="width: 100%; margin-top: 10px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; display: inline-block"></div>
+          <!--<div id="highlights" style="width: 100%; margin-top: 10px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; display: inline-block">
             <h2>Highlights</h2>
+          </div>-->
                     <ul>
                        <li><span> [2022-04] ssLOTR is accepted to IMWUT 2022.</span></li>
                        <li><span> [2021-10] DACHash won the <strong>Best Paper Award</strong>.</span></li>
                        <li><span> [2021-10] A paper is accepted to MLTEC 2021.</span></li>
                        <li><span> [2021-08] DACHash is accepted to SBAC-PAD 2021.</span></li>
                        <li><span> [2021-07] I moved to PennState!</span></li>
-                       <li><span> [2020-08] My first paper is accepted to AI4I 2020.</span></li>
-                      
+                       <li><span> [2020-08] My first paper is accepted to AI4I 2020.</span></li>        
                     </ul>
 		    </td></tr>
-
       </table>
+        </div>
+  <hr class="soft">
 
 
 
 
 
+<!--Publications-->
+
+
+
+    <button style="border:0px transparent; background-color: transparent;outline:none;"type="button" class="collapsible" data-toggle="collapse" data-target="#publications" id="publications_button"><h3>Publications</h3></button>
+    <div id="publications" class="collapse in">
 
     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <!--<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">-->
-         <div id="publications" style="width: 100%; margin-top: 10px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; display: inline-block"></div>
-        <tr><td>
+
+      <tr><td>
+         <!--<div id="publications" style="width: 100%; margin-top: 10px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; display: inline-block">
             <h2>Publications</h2>
+          </div>-->
 		  </td></tr>
     </table>
 
@@ -378,6 +399,12 @@ function topFunction() {
         </tr>
         </table>
 
+      </div>
+
+
+
+
+<hr class="soft">
 
 
 
@@ -386,18 +413,19 @@ function topFunction() {
 
 
 
+<!--awards-->
 
 
 
 
 
-
-
-
+    <button style="border:0px transparent; background-color: transparent;outline:none;"type="button" class="collapsible" data-toggle="collapse" data-target="#award" id="award_button"><h3>Awards & Honors</h3></button>
+    <div id="award" class="collapse in">
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
         <tr><td>
-          <div id="award" style="width: 100%; margin-top: 10px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; display: inline-block"></div>
-            <h2>Awards & Honors</h2>
+          <!--<div id="award" style="width: 100%; margin-top: 10px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; display: inline-block">
+            <h2>Awards & Honors</h2>   -->         
+          </div>
                     <ul>
                        <li><span> Best Paper Award, SBAC-PAD 2021</span></li>
                        <li><span> Summa Cum Laude, University of Mississippi </span></li>
@@ -407,19 +435,31 @@ function topFunction() {
                        <li><span> Outstanding Freshmen, North China University of Technology </span></li>
                       
                     </ul>
+
+          
         </td></tr>
       </table>
+      </div>
+
+
+<hr class="soft">
 
 
 
 
 
+
+
+
+<!--bottom-->
 
 		<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-		<tr><td>
-		<br>
-      <p align="right"><font size="2">Last update on June 2, 2022 and <a href="http://www.cs.berkeley.edu/~barron/">big shout out to Jon</a></font></p>
-    </td></tr>
+		<tr>
+      <td>
+		    <br>
+        <p align="center"><font size="2">Last update on June 2, 2022 and <a href="http://www.cs.berkeley.edu/~barron/">big shout out to Jon</a></font></p>
+      </td>
+    </tr>
     </table>
 
 
@@ -435,10 +475,12 @@ function topFunction() {
 
 
 
+
+<!--hide abs/bib at first-->
+
 <script xml:space="preserve" language="JavaScript">
 hideallbibs();
 </script>
-
 
 
 <script xml:space="preserve" language="JavaScript">
