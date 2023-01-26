@@ -225,8 +225,9 @@ function topFunction() {
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
         <tr><td>
                     <ul>
-		       <li><span> [2022-12] I passed Ph.D. qualifying exams.</span></li>
-		       <li><span> [2022-09] I received an outstanding TA award! Thanks everyone!</span></li>
+                       <li><span> [2023-01] OmniRing is accepted to IoTDI 2023.</span></li>
+		                   <li><span> [2022-12] I passed Ph.D. qualifying exams.</span></li>
+		                   <li><span> [2022-09] I received an outstanding TA award! Thanks everyone!</span></li>
                        <li><span> [2022-04] ssLOTR is accepted to IMWUT 2022.</span></li>
                        <li><span> [2021-10] DACHash won the <strong>Best Paper Award</strong>.</span></li>
                        <li><span> [2021-10] A paper is accepted to MLTEC 2021.</span></li>
@@ -262,6 +263,40 @@ function topFunction() {
     </table>
 
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+
+
+          <tr>
+            <td width="33%" valign="top"><a href="pubs/omniring.png"><img src="pubs/omniring.png" width="100%" style="border-style: none"></a>
+            <td width="67%" valign="top">
+              <p>
+              <a href="https://hzhou3.github.io" id="">
+              <heading>One Ring to Rule Them All: An Open Source Smartring Platform for Finger Motion Analytics and Healthcare Applications</heading></a><br>
+              <strong>Hao Zhou</strong>*, <FONT COLOR="#777777">Taiting Lu*, Yilin Liu, Shijia Zhang, Runze Liu, Mahanth Gowda</FONT>
+              <br>
+              <em>IEEE/ACM IoTDI</em>, 2023.
+              <br>
+              </p>
+
+              <div class="paper" id="omniring">
+                <a href="omniring/index.html">project page</a> /
+                <a href="javascript:toggleblock('omniring_abs')">abstract</a> / 
+                <a href="bib/omniring.txt">bibtex</a>
+                <!-- <a href="https://raw.githubusercontent.com/hzhou3/hzhou3.github.io/main/bib/omniring.bib">bibtex</a> -->
+                 
+          
+                <p align="justify"> <i id="omniring_abs">This paper presents OmniRing, an open-source smartring platform with IMU and PPG sensors for activity tracking and health analytics applications. Smartring platforms are on the rise because of comfortable wearing, with the market size expected to reach $92 million soon. Nevertheless, most existing platforms are either commercial and proprietary without details of software/hardware or use suboptimal PCB design resulting in bulky form factors, inconvenient for wearing in daily life. Towards bridging the gap, OmniRing presents an extensible design of a smartring with a miniature form factor, longer battery life, wireless communication, and water resistance so that users can wear it all the time. Towards this end, OmniRing exploits opportunities in SoC, and carefully integrates the sensing units with a microcontroller and BLE modules. The electronic components are integrated on both sides of a flexible PCB that is bent in the shape of a ring and enclosed in a flexible and waterproof case for smooth skin contact. The overall cost is under $25, with weight of 2.5g, and up to a week of battery life. Extensive usability surveys validate the comfort levels. To validate the sensing capabilities, we enable an application in 3D finger motion tracking. By extracting synthetic training data from public videos coupled with data augmentation to minimize the overhead of training data generation for a new platform, OmniRing designs a transformer-based model that exploits correlations across fingers and time to track 3D finger motion with an accuracy of 6.57𝑚𝑚. We also validate the use of PPG data from OmniRing for heart rate monitoring. We believe the platform can enable exciting applications in fitness tracking, metaverse, sports, and healthcare.</i></p>
+                </div>
+            </td>
+        </tr>
+
+
+
+
+
+
+
+
+
             
           <tr>
             <td width="33%" valign="top"><a href="pubs/sslotr.png"><img src="pubs/sslotr.png" width="100%" style="border-style: none"></a>
@@ -279,7 +314,8 @@ function topFunction() {
                 
                 <a href="javascript:toggleblock('sslotr_abs')">abstract</a> / 
                 <!--<a shape="rect" href="javascript:togglebib('sslotr')" class="togglebib">bibtex</a> / -->
-                <a href="https://raw.githubusercontent.com/hzhou3/hzhou3.github.io/main/bib/sslotr.bib">bibtex</a> /
+                <!-- <a href="https://raw.githubusercontent.com/hzhou3/hzhou3.github.io/main/bib/sslotr.bib">bibtex</a> / -->
+                <a href="bib/sslotr.txt">bibtex</a> /
                 <a href="slides/sslotr.pdf">slides</a>  
 		      
                 <p align="justify"> <i id="sslotr_abs">This paper presents ssLOTR (self-supervised learning on the rings), a system that shows the feasibility of designing self-supervised learning based techniques for 3D finger motion tracking using a custom-designed wearable inertial measurement unit (IMU) sensor with a minimal overhead of labeled training data. Ubiquitous finger motion tracking enables a number of applications in augmented and virtual reality, sign language recognition, rehabilitation healthcare, sports analytics, etc. However, unlike vision, there are no large-scale training datasets for developing robust machine learning (ML) models on wearable devices. ssLOTR designs ML models based on data augmentation and self-supervised learning to first extract efficient representations from raw IMU data without the need for any training labels. The extracted representations are further trained with small-scale labeled training data. In comparison to fully supervised learning, we show that only 15% of labeled training data is sufficient with self-supervised learning to achieve similar accuracy. Our sensor device is designed using a two-layer printed circuit board (PCB) to minimize the footprint and uses a combination of Polylactic acid (PLA) and Thermoplastic polyurethane (TPU) as housing materials for sturdiness and flexibility. It incorporates a system-on-chip (SoC) microcontroller with integrated WiFi/Bluetooth Low Energy (BLE) modules for real-time wireless communication, portability, and ubiquity. In contrast to gloves, our device is worn like rings on fingers, and therefore, does not impede dexterous finger motion. Extensive evaluation with 12 users depicts a 3D joint angle tracking accuracy of 9.07◦ (joint position accuracy of 6.55𝑚𝑚) with robustness to natural variation in sensor positions, wrist motion, etc, with low overhead in latency and power consumption on embedded platforms.</i></p>
@@ -314,7 +350,8 @@ function topFunction() {
                 
                 <a href="javascript:toggleblock('dachash_abs')">abstract</a> /
                 <!--<a shape="rect" href="javascript:togglebib('dachash')" class="togglebib">bibtex</a>-->
-                <a href="https://raw.githubusercontent.com/hzhou3/hzhou3.github.io/main/bib/dachash.bib">bibtex</a> 
+                <!-- <a href="https://raw.githubusercontent.com/hzhou3/hzhou3.github.io/main/bib/dachash.bib">bibtex</a> -->
+                <a href="bib/dachash.txt">bibtex</a>
           
                 <p align="justify"> <i id="dachash_abs">
                 GPU acceleration of hash tables in high-volume transaction applications such as computational geometry and bio-informatics are emerging. Recently, several hash table designs have been proposed on GPUs, but our analysis shows that they still do not adequately factor in several important aspects of a GPU’s execution environment, leaving large room for further optimization. To that end, we present a dynamic, cache-aware, concurrent hash table named DACHash. It is specifically designed to improve memory efficiency and reduce thread divergence on GPUs. We propose several novel techniques including a GPU-friendly data structure & sizing, a reorder algorithm, and dynamic thread-data mapping schemes that make the operations of hash table more amendable to GPU architecture. Testing DACHash on an NVIDIA GTX 3090 achieves a peak performance of 8.65 billion queries/second in static searching and 5.54 billion operations/second in concurrent operation execution. It outperforms the state-of-the-art SlabHash by 41.53% and 19.92% respectively. We also verify that our proposed technique improves L2 cache bandwidth and L2 cache hit rate by 9.18× and 2.68× respectively.</i></p>
@@ -355,7 +392,8 @@ function topFunction() {
                 
                 <a href="javascript:toggleblock('oneclass_abs')">abstract</a> /
                 <!--<a shape="rect" href="javascript:togglebib('oneclass')" class="togglebib">bibtex</a> /-->
-                <a href="https://raw.githubusercontent.com/hzhou3/hzhou3.github.io/main/bib/oneclass.bib">bibtex</a> /
+                <!-- <a href="https://raw.githubusercontent.com/hzhou3/hzhou3.github.io/main/bib/oneclass.bib">bibtex</a> / -->
+                <a href="bib/oneclass.txt">bibtex</a> /
                 
                 <a href="https://github.com/hzhou3/one-class-dataset" >dataset</a> 
           
@@ -399,7 +437,8 @@ function topFunction() {
                 
                 <a href="javascript:toggleblock('fasterfdd_abs')">abstract</a> /
                 <!--<a shape="rect" href="javascript:togglebib('fasterfdd')" class="togglebib">bibtex</a>-->
-                <a href="https://raw.githubusercontent.com/hzhou3/hzhou3.github.io/main/bib/fasterfdd.bib">bibtex</a>
+                <!-- <a href="https://raw.githubusercontent.com/hzhou3/hzhou3.github.io/main/bib/fasterfdd.bib">bibtex</a> -->
+                <a href="bib/fasterfdd.txt">bibtex</a>
           
                 <p align="justify"> <i id="fasterfdd_abs">
                 This paper presents a fabric defect detection network (FabricNet) for automatic fabric defect detection. Our proposed FabricNet incorporates several effective techniques, such as Feature Pyramid Network (FPN), Deformable Convolution (DC) network, and Distance IoU Loss function, into vanilla Faster RCNN to improve the accuracy and speed of fabric defect detection. Our experiment shows that, when optimizations are combined, the FabricNet achieves 62.07% mAP and 97.37% AP50 on DAGM 2007 dataset, and an average prediction speed of 17 frames per second.
@@ -545,7 +584,7 @@ function topFunction() {
 		<tr>
       <td>
 		    <br>
-        <p align="center"><font size="2">Last update on Dec. 2022 and <a href="http://www.cs.berkeley.edu/~barron/">big shout out to Jon</a></font></p>
+        <p align="center"><font size="2">Last update on Jan. 2023 and <a href="http://www.cs.berkeley.edu/~barron/">big shout out to Jon</a></font></p>
       </td>
     </tr>
     </table>
@@ -568,6 +607,10 @@ function topFunction() {
 
 <script xml:space="preserve" language="JavaScript">
 hideallbibs();
+</script>
+
+<script xml:space="preserve" language="JavaScript">
+hideblock('omniring_abs');
 </script>
 
 

@@ -1,0 +1,6 @@
+@article{zhou2023one,
+  title={One Ring to Rule Them All: An Open Source Smartring Platform for Finger Motion Analytics and Healthcare Applications},
+  author={Zhou, Hao and Lu, Taiting and Liu, Yilin and Zhang, Shijia and Liu, Runze and Gowda, Mahanth},
+  journal={IEEE/ACM IoTDI},
+  year={2023},
+}
