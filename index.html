@@ -70,7 +70,7 @@
 </style>
 
 
-<link rel="icon" type="image/png" href="images/hao2.jpeg">
+<link rel="icon" type="image/png" href="images/hao1-c.png">
 
 
 
@@ -166,12 +166,15 @@ function topFunction() {
             <td width="67%" valign="middle" align="justify">
               <p align="center"><font size="6px">Hao Zhou 周浩</font> <br>hfz5190@psu.edu</p>
               <p>
-                I am a second-year Ph.D. student at PennState, advised by <a href="https://www.cse.psu.edu/~mkg31/">Prof. Mahanth Gowda</a>. Before starting my Ph.D. life, I recieved my M.S. and B.S. in Computer & Information Science at the University of Mississippi, advised by <a href="https://john.cs.olemiss.edu/~bjang/">Prof. Byunghyun Jang</a> and <a href="https://john.cs.olemiss.edu/~hcc/">Prof. H. Conrad Cunningham</a> respectively. 
-              </p>
-              <p>
-                  <i>"That's one small step for man, one giant leap for mankind".</i> I am working on that small step in mobile and wearable computing with AI for our intelligent future.
+                I am currently in my third year of Ph.D. studies at PennState, under the guidance of <a href="https://www.cse.psu.edu/~mkg31/">Prof. Mahanth Gowda</a>. I was also fortunate to receive mentorship from <a href="https://people.cs.umass.edu/~jxiong/">Prof. Jie Xiong</a> during my internships at Microsoft Research Asia. My research interests span across wireless sensing, wearable computing, and machine learning.
+  
               </p>
 
+              <br>
+
+              <p style="text-align:center"> "Brevity is the soul of wit" -- William Shakespeare  </p>
+        
+              <br>
               <p style="text-align:center">
                 <a href="cv/cv.pdf">CV</a> &nbsp/&nbsp
                 <a href="https://scholar.google.com/citations?user=Oc7AeVYAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
@@ -183,7 +186,7 @@ function topFunction() {
 
 
 
-            <td width="33%"valign="top"><img src="images/hao2-c.png" width="100%"></td>
+            <td width="33%"valign="top"><img src="images/hao1-c.png" width="100%"></td>
           </tr>
         </table>
 
@@ -225,14 +228,13 @@ function topFunction() {
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
         <tr><td>
                     <ul>
-                       <li><span> [2023-05] OmniRing won the <strong>Best Paper Award for IoT Edge AI</strong>.</span></li>
+                       <li><span> [2023-08] SignQuery is accepted to MobiCom'23.</span></li>
                        <li><span> [2023-04] I will be an intern at Microsoft Research Asia!</span></li>
                        <li><span> [2023-01] OmniRing is accepted to IoTDI 2023.</span></li>
 		                   <li><span> [2022-12] I passed Ph.D. qualifying exams.</span></li>
 		                   <li><span> [2022-09] I received an outstanding TA award! Thanks everyone!</span></li>
                        <li><span> [2022-04] ssLOTR is accepted to IMWUT 2022.</span></li>
                        <li><span> [2021-10] DACHash won the <strong>Best Paper Award</strong>.</span></li>
-                       <li><span> [2021-10] A paper is accepted to MLTEC 2021.</span></li>
                        <li><span> [2021-08] DACHash is accepted to SBAC-PAD 2021.</span></li>
                        <li><span> [2021-07] I moved to PennState!</span></li>
                        <li><span> [2020-08] My first paper is accepted to AI4I 2020.</span></li>        
@@ -250,28 +252,86 @@ function topFunction() {
 <!--Publications-->
 
 
-
     <button style="border:0px transparent; background-color: transparent;outline:none;"type="button" class="collapsible" data-toggle="collapse" data-target="#publications" id="publications_button"><h3>Publications</h3></button>
     <div id="publications" class="collapse in">
 
     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <!--<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">-->
-
       <tr><td>
-         <!--<div id="publications" style="width: 100%; margin-top: 10px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; display: inline-block">
-            <h2>Publications</h2>
-          </div>-->
-		  </td></tr>
+      </td></tr>
     </table>
 
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <tr>
+            <td width="33%" valign="top"><a href="pubs/signquery.png"><img src="pubs/signquery.png" width="100%" style="border-style: none"></a>
+            <td width="67%" valign="top">
+              <p>
+              <a href="https://hzhou3.github.io" id="">
+              <heading>SignQuery: A Natural User Interface and Search Engine for Sign Languages with Wearable Sensors</heading></a><br>
+              <strong>Hao Zhou</strong>, <FONT COLOR="#777777">Taiting Lu, Kristina McKinnie, Joseph Palagano, Kenneth DeHaan, Mahanth Gowda</FONT>
+              <br>
+              <em>ACM MobiCom</em>, 2023.
+              <br>
+              </p>
+
+              <div class="paper" id="signquery">
+                <!-- <a href="https://www.cse.psu.edu/~mkg31/projects/omniring/">project page</a> / -->
+                <a href="javascript:toggleblock('signquery_abs')">abstract</a> / 
+                <a href="bib/signquery.txt">bibtex</a>
+                <!-- <a href="https://raw.githubusercontent.com/hzhou3/hzhou3.github.io/main/bib/omniring.bib">bibtex</a> -->
+                 
+                <p align="justify"> <i id="signquery_abs">Search Engines such as Google, Baidu, and Bing have revolutionized the way we interact with the cyber world with a number of applications in recommendations, learning, advertisements, healthcare, entertainment, etc. In this paper, we design search engines for sign languages such as American Sign Language (ASL). Sign languages use hand and body motion for communication with rich grammar, complexity, and vocabulary that is comparable to spoken languages. This is the primary language for the Deaf community with a global population of ≈ 500 million. However, search engines that support sign language queries in native form do not exist currently. While translating a sign language to a spoken language and using existing search engines might be one possibility, this can miss critical information because existing translation systems are either limited in vocabulary or constrained to a specific domain. In contrast, this paper presents a holistic approach where ASL queries in native form as well as ASL videos and textual information available online are converted into a common representation space. Such a joint representation space provides a common framework for precisely representing different sources of information and accurately matching a query with relevant information that is available online. Our system uses low-intrusive wearable sensors for capturing the sign query. To minimize the training overhead, we obtain synthetic training data from a large corpus of online ASL videos across diverse topics. Evaluated over a set of Deaf users with native ASL fluency, the accuracy is comparable with state-of-the-art recommendation systems for Amazon, Netflix, Yelp, etc., suggesting the usability of the system in the real world. For example, the recall@10 of our system is 64.3%, i.e., among the top ten search results, six of them are relevant to the search query. Moreover, the system is robust to variations in signing patterns, dialects, sensor positions, etc.</i></p>
+                </div>
+            </td>
+        </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
           <tr>
             <td width="33%" valign="top"><a href="pubs/omniring.png"><img src="pubs/omniring.png" width="100%" style="border-style: none"></a>
             <td width="67%" valign="top">
               <p>
-              <a href="https://hzhou3.github.io" id="">
+              <a href="https://dl.acm.org/doi/abs/10.1145/3576842.3582382" id="">
               <heading>One Ring to Rule Them All: An Open Source Smartring Platform for Finger Motion Analytics and Healthcare Applications</heading></a><br>
               <strong>Hao Zhou</strong>*, <FONT COLOR="#777777">Taiting Lu*, Yilin Liu, Shijia Zhang, Runze Liu, Mahanth Gowda</FONT>
               <br>
@@ -283,9 +343,7 @@ function topFunction() {
                 <a href="https://www.cse.psu.edu/~mkg31/projects/omniring/">project page</a> /
                 <a href="javascript:toggleblock('omniring_abs')">abstract</a> / 
                 <a href="bib/omniring.txt">bibtex</a>
-                <!-- <a href="https://raw.githubusercontent.com/hzhou3/hzhou3.github.io/main/bib/omniring.bib">bibtex</a> -->
-                 
-          
+
                 <p align="justify"> <i id="omniring_abs">This paper presents OmniRing, an open-source smartring platform with IMU and PPG sensors for activity tracking and health analytics applications. Smartring platforms are on the rise because of comfortable wearing, with the market size expected to reach $92 million soon. Nevertheless, most existing platforms are either commercial and proprietary without details of software/hardware or use suboptimal PCB design resulting in bulky form factors, inconvenient for wearing in daily life. Towards bridging the gap, OmniRing presents an extensible design of a smartring with a miniature form factor, longer battery life, wireless communication, and water resistance so that users can wear it all the time. Towards this end, OmniRing exploits opportunities in SoC, and carefully integrates the sensing units with a microcontroller and BLE modules. The electronic components are integrated on both sides of a flexible PCB that is bent in the shape of a ring and enclosed in a flexible and waterproof case for smooth skin contact. The overall cost is under $25, with weight of 2.5g, and up to a week of battery life. Extensive usability surveys validate the comfort levels. To validate the sensing capabilities, we enable an application in 3D finger motion tracking. By extracting synthetic training data from public videos coupled with data augmentation to minimize the overhead of training data generation for a new platform, OmniRing designs a transformer-based model that exploits correlations across fingers and time to track 3D finger motion with an accuracy of 6.57𝑚𝑚. We also validate the use of PPG data from OmniRing for heart rate monitoring. We believe the platform can enable exciting applications in fitness tracking, metaverse, sports, and healthcare.</i></p>
                 </div>
             </td>
@@ -378,7 +436,7 @@ function topFunction() {
 
 
 <!--<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">-->
-            
+    <!--         
           <tr>
             <td width="33%" valign="top"><a href="pubs/oneclass.png"><img src="pubs/oneclass.png" width="100%" style="border-style: none"></a>
             <td width="67%" valign="top">
@@ -393,8 +451,6 @@ function topFunction() {
               <div class="paper" id="oneclass">
                 
                 <a href="javascript:toggleblock('oneclass_abs')">abstract</a> /
-                <!--<a shape="rect" href="javascript:togglebib('oneclass')" class="togglebib">bibtex</a> /-->
-                <!-- <a href="https://raw.githubusercontent.com/hzhou3/hzhou3.github.io/main/bib/oneclass.bib">bibtex</a> / -->
                 <a href="bib/oneclass.txt">bibtex</a> /
                 
                 <a href="https://github.com/hzhou3/one-class-dataset" >dataset</a> 
@@ -402,19 +458,9 @@ function topFunction() {
                 <p align="justify"> <i id="oneclass_abs">
                 An automated and accurate fabric defect inspection system is in high demand as a replacement for slow, inconsistent, error-prone, and expensive human operators in the textile industry. Previous efforts focused on certain types of fabrics or defects, which is not an ideal solution. In this paper, we propose a novel one-class model that is capable of detecting various defects on different fabric types. Our model takes advantage of a welldesigned Gabor filter bank to analyze fabric texture. We then leverage an advanced deep learning algorithm, autoencoder, to learn general feature representations from the outputs of the Gabor filter bank. Lastly, we develop a nearest neighbor density estimator to locate potential defects and draw them on the fabric images. We demonstrate the effectiveness and robustness of the proposed model by testing it on various types of fabrics such as plain, patterned, and rotated fabrics. Our model also achieves a true positive rate (a.k.a recall) value of 0.895 with no false alarms on our dataset based upon the Standard Fabric Defect Glossary.
                 </i></p>
-  <!--
-                <pre xml:space="preserve">
-@article{zhou2022one,
-  title={One-Class Model for Fabric Defect Detection},
-  author={Zhou, Hao and Chen, Yixin and Troendle, David and Jang, Byunghyun},
-  journal={arXiv preprint arXiv:2204.09648},
-  year={2022},
-}
-                  </pre>
-                -->
                 </div>
             </td>
-        </tr>
+        </tr> -->
 
 
 
@@ -440,7 +486,8 @@ function topFunction() {
                 <a href="javascript:toggleblock('fasterfdd_abs')">abstract</a> /
                 <!--<a shape="rect" href="javascript:togglebib('fasterfdd')" class="togglebib">bibtex</a>-->
                 <!-- <a href="https://raw.githubusercontent.com/hzhou3/hzhou3.github.io/main/bib/fasterfdd.bib">bibtex</a> -->
-                <a href="bib/fasterfdd.txt">bibtex</a>
+                <a href="bib/fasterfdd.txt">bibtex</a> /
+                <a href="https://github.com/hzhou3/one-class-dataset" >related (dataset) </a> 
           
                 <p align="justify"> <i id="fasterfdd_abs">
                 This paper presents a fabric defect detection network (FabricNet) for automatic fabric defect detection. Our proposed FabricNet incorporates several effective techniques, such as Feature Pyramid Network (FPN), Deformable Convolution (DC) network, and Distance IoU Loss function, into vanilla Faster RCNN to improve the accuracy and speed of fabric defect detection. Our experiment shows that, when optimizations are combined, the FabricNet achieves 62.07% mAP and 97.37% AP50 on DAGM 2007 dataset, and an average prediction speed of 17 frames per second.
@@ -554,6 +601,7 @@ function topFunction() {
             <h2>Awards & Honors</h2>   -->         
           </div>
                     <ul>	    
+                 <!-- <li><span>      Best Paper Award for IoT Edge AI</span></li> -->
 		       <li><span> Outstanding TA Award, PennState</span></li>
                        <li><span> Best Paper Award, SBAC-PAD 2021</span></li>
                        <li><span> Summa Cum Laude, University of Mississippi </span></li>
@@ -585,7 +633,7 @@ function topFunction() {
 		<tr>
       <td>
 		    <br>
-        <p align="center"><font size="2">Last update on May 2023 and <a href="http://www.cs.berkeley.edu/~barron/">big shout out to Jon</a></font></p>
+        <p align="center"><font size="2">Last update on August 2023 and <a href="http://www.cs.berkeley.edu/~barron/">big shout out to Jon</a></font></p>
       </td>
     </tr>
     </table>
@@ -610,6 +658,12 @@ function topFunction() {
 hideallbibs();
 </script>
 
+
+<script xml:space="preserve" language="JavaScript">
+hideblock('signquery_abs');
+</script>
+
+
 <script xml:space="preserve" language="JavaScript">
 hideblock('omniring_abs');
 </script>
@@ -630,6 +684,7 @@ hideblock('oneclass_abs');
 <script xml:space="preserve" language="JavaScript">
 hideblock('fasterfdd_abs');
 </script>
+
 
 
 
