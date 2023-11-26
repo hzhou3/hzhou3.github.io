@@ -1,0 +1,6 @@
+@article{zhang2023earphone,
+  title={I am an Earphone and I can Hear my Users Face: Facial Landmark Tracking using Smart Earphones},
+  author={Zhang, Shijia and Lu, Taiting and Zhou, Hao and Liu, Yilin and Liu, Runze and Gowda, Mahanth},
+  journal={ACM Transactions on Internet of Things},
+  publisher={ACM New York, NY}
+}

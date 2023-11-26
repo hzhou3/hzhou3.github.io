@@ -326,6 +326,31 @@ function topFunction() {
 
 
 
+          <tr>
+            <td width="33%" valign="top"><a href="pubs/earface.png"><img src="pubs/earface.png" width="100%" style="border-style: none"></a>
+            <td width="67%" valign="top">
+              <p>
+              <a href="https://dl.acm.org/doi/10.1145/3614438" id="">
+              <heading>I am an Earphone and I can Hear my Users Face: Facial Landmark Tracking using Smart Earphones</heading></a><br>
+               <FONT COLOR="#777777">Shijia Zhang, Taiting Lu,</FONT> <strong>Hao Zhou</strong><FONT COLOR="#777777">, Yilin Liu, Runze Liu, Mahanth Gowda</FONT>
+              <br>
+              <em>ACM Transactions on Internet of Things</em>, 2023.
+              <br>
+              </p>
+              <div class="paper" id="earface">
+                <a href="javascript:toggleblock('earface_abs')">abstract</a> / 
+                <a href="bib/earface.txt">bibtex</a>
+
+                <p align="justify"> <i id="earface_abs">This paper presents EARFace, a system that shows the feasibility of tracking facial landmarks for 3D facial reconstruction using in-ear acoustic sensors embedded within smart earphones. This enables a number of applications in the areas of facial expression tracking, user-interfaces, AR/VR applications, affective computing, accessibility, etc. While conventional vision-based solutions break down under poor lighting, occlusions, and also suffer from privacy concerns, earphone platforms are robust to ambient conditions, while being privacy-preserving. In contrast to prior work on earable platforms that perform outer-ear sensing for facial motion tracking, EARFace shows the feasibility of completely in-ear sensing with a natural earphone form-factor, thus enhancing the comfort levels of wearing. The core intuition exploited by EARFace is that the shape of the ear canal changes due to the movement of facial muscles during facial motion. EARFace tracks the changes in shape of the ear canal by measuring ultrasonic channel frequency response (CFR) of the inner ear, ultimately resulting in tracking of the facial motion. A transformer based machine learning (ML) model is designed to exploit spectral and temporal relationships in the ultrasonic CFR data to predict the facial landmarks of the user with an accuracy of 1.83 mm. Using these predicted landmarks, a 3D graphical model of the face that replicates the precise facial motion of the user is then reconstructed. Domain adaptation is further performed by adapting the weights of layers using a group-wise and differential learning rate. This decreases the training overhead in EARFace. The transformer based ML model runs on smartphone devices with a processing latency of 13 ms and an overall low power consumption profile. Finally, usability studies indicate higher levels of comforts of wearing EARFace’s earphone platform in comparison with alternative form-factors.</i></p>
+                </div>
+            </td>
+        </tr>
+
+
+
+
+
+
 
 
 
@@ -663,6 +688,9 @@ function topFunction() {
 hideallbibs();
 </script>
 
+<script xml:space="preserve" language="JavaScript">
+hideblock('earface_abs');
+</script>
 
 <script xml:space="preserve" language="JavaScript">
 hideblock('signquery_abs');
