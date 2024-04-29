@@ -167,15 +167,19 @@ function topFunction() {
               <p align="center"><font size="6px">Hao Zhou 周浩</font>
                 <br>hao *DOT* zhou *AT* psu *DOT* edu</p>
               <p>
-                I am currently in my third year of Ph.D. studies at PennState, under the guidance of <a href="https://www.cse.psu.edu/~mkg31/">Prof. Mahanth Gowda</a>. I was also fortunate to receive mentorship from <a href="https://people.cs.umass.edu/~jxiong/">Prof. Jie Xiong</a> during my internships at Microsoft Research Asia. My research interests span across wireless sensing, wearable computing, and multimodal learning.
-  
+                I am currently in my third year of Ph.D. studies at PennState, under the guidance of <a href="https://www.cse.psu.edu/~mkg31/">Prof. Mahanth Gowda</a>. I was also fortunate to receive mentorship from <a href="https://people.cs.umass.edu/~jxiong/">Prof. Jie Xiong</a> during my internships at Microsoft Research Asia. 
               </p>
+
+              <p>
+                <strong>My main research spans across wearable/wireless sensing with a machine learning focus in the fields of pose estimation, digital health, and accessibility topicssuch as sign language recognition.</strong> 
+              </p>  
+              
 
               <br>
 
-              <p style="text-align:center"> "Brevity is the soul of wit" -- William Shakespeare  </p>
+              <!-- <p style="text-align:center"> "Brevity is the soul of wit" -- William Shakespeare  </p> -->
 
-              <p style="text-align:center"> <FONT COLOR="#ff0000">I am looking for research internships for summer 2024 (and fall 2024). </FONT> </p>
+              <p style="text-align:left"> <FONT COLOR="#ff0000">I am open to collabration on wearable and wireless sensing with machine learning focus, please shot me an email and we will work things out from there. </FONT> </p>
         
               <br>
               <p style="text-align:center">
@@ -189,8 +193,10 @@ function topFunction() {
 
 
 
-            <td width="33%"valign="top"><img src="images/hao1-c.png" width="100%"></td>
+            <td width="30%"valign="top"><img src="images/hao.jpg" width="100%"></td>
+            
           </tr>
+
         </table>
 
 
@@ -200,8 +206,9 @@ function topFunction() {
 
 
 <!--navigator-->
-
+      
         <table width="100%" align="right" border="0" cellspacing="0" cellpadding="20" style="border-collapse: collapse; margin-top:10px">
+          <!-- <p style="text-align:right"> "Brevity is the soul of wit" -- William Shakespeare  </p> -->
           <tr style="border-bottom: 2px solid rgb(192, 192, 192)">
           <td width="100%" valign="top" align="middle">
             <a href="#news"><big><b>News</b></big></a> &emsp;<span>&#183;</span>&emsp;
@@ -231,6 +238,8 @@ function topFunction() {
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
         <tr><td>
                     <ul>
+                       <span> [2024-05] I will be interning at Ditial Health team at Samsung Research American.</span><br>
+                       <span> [2024-03] ASLRing is accepted IoTDI 2024.</span><br>
                        <span> [2023-11] I passed the comprehensive exam!</span><br>
                        <span> [2023-11] Received Penn State International Travel Grant.</span><br>
                        <span> [2023-09] Received Student Travel Grant from MobiCom'23.</span><br>
@@ -277,6 +286,32 @@ function topFunction() {
 
 
 
+
+
+
+
+          <tr>
+            <td width="33%" valign="top"><a href="pubs/aslring.png"><img src="pubs/aslring.png" width="100%" style="border-style: none"></a>
+            <td width="67%" valign="top">
+              <p>
+              <a href="" id="">
+              <heading>ASLRing: American Sign Language Recognition with Meta-Learning on Wearables</heading></a><br>
+              <strong>Hao Zhou</strong>, <FONT COLOR="#777777">Taiting Lu, Kenneth DeHaan, Mahanth Gowda</FONT>
+              <br>
+              <em>IEEE/ACM IoTDI</em>, 2024.
+              <br>
+              </p>
+
+              <div class="paper" id="aslring">
+                <a href="javascript:toggleblock('aslring_abs')">abstract</a> / 
+                <a href="https://www.cse.psu.edu/∼mkg31/projects/aslring/">project page</a> / 
+                <a href="bib/aslring.txt">bibtex</a> 
+                <!-- <a href="slides/aslring.pdf">slides</a>  -->
+                 
+                <p align="justify"> <i id="aslring_abs">Sign Language is widely used by over 500 million Deaf and hard of hearing (DHH) individuals in their daily lives. While prior works made notable efforts to show the feasibility of recognizing signs with various sensing modalities both from the wireless and wearable domains, they recruited sign language learners for validation. Based on our interactions with native sign language users, we found that signal diversity hinders the generalization of users (e.g., users from different backgrounds interpret signs differently, and native users have complex articulated signs), thus resulting in recognition difficulty. While multiple solutions (e.g., increasing diversity of data, harvesting virtual data from sign videos) are possible, we propose ASLRing that addresses the sign language recognition problem from a meta-learning perspective by learning an inherent knowledge about diverse spaces of signs for fast adaptation. ASLRing bypasses expensive data collection process and avoids the limitation of leveraging virtual data from sign videos (e.g., occlusions, overexposure, low-resolution). To validate ASLRing, instead of recruiting learners, we conducted a comprehensive user study with a database with 1080 sentences generated by a vocabulary size of 1057 from 14 native sign language users and achieved a 26.9% word error rate, and we also validated ASLRing in diverse settings.</i></p>
+                </div>
+            </td>
+        </tr>
 
 
 
@@ -372,8 +407,8 @@ function topFunction() {
               </p>
 
               <div class="paper" id="omniring">
-                <a href="https://www.cse.psu.edu/~mkg31/projects/omniring/">project page</a> /
-                <a href="javascript:toggleblock('omniring_abs')">abstract</a> / 
+                <a href="javascript:toggleblock('omniring_abs')">abstract</a> /
+                <a href="https://www.cse.psu.edu/~mkg31/projects/omniring/">project page</a> / 
                 <a href="bib/omniring.txt">bibtex</a>
 
                 <p align="justify"> <i id="omniring_abs">This paper presents OmniRing, an open-source smartring platform with IMU and PPG sensors for activity tracking and health analytics applications. Smartring platforms are on the rise because of comfortable wearing, with the market size expected to reach $92 million soon. Nevertheless, most existing platforms are either commercial and proprietary without details of software/hardware or use suboptimal PCB design resulting in bulky form factors, inconvenient for wearing in daily life. Towards bridging the gap, OmniRing presents an extensible design of a smartring with a miniature form factor, longer battery life, wireless communication, and water resistance so that users can wear it all the time. Towards this end, OmniRing exploits opportunities in SoC, and carefully integrates the sensing units with a microcontroller and BLE modules. The electronic components are integrated on both sides of a flexible PCB that is bent in the shape of a ring and enclosed in a flexible and waterproof case for smooth skin contact. The overall cost is under $25, with weight of 2.5g, and up to a week of battery life. Extensive usability surveys validate the comfort levels. To validate the sensing capabilities, we enable an application in 3D finger motion tracking. By extracting synthetic training data from public videos coupled with data augmentation to minimize the overhead of training data generation for a new platform, OmniRing designs a transformer-based model that exploits correlations across fingers and time to track 3D finger motion with an accuracy of 6.57𝑚𝑚. We also validate the use of PPG data from OmniRing for heart rate monitoring. We believe the platform can enable exciting applications in fitness tracking, metaverse, sports, and healthcare.</i></p>
@@ -578,7 +613,8 @@ function topFunction() {
     
           </div>
           <ul>     
-           <li><span> Invited Reviewer for IMWUT</span></li>
+           <li><span> Invited Reviewer for Transactions on Mobile Computing</span></li>
+           <li><span> Invited Reviewer for Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies</span></li>
            <li><span> Invited Reviewer for Journal of Intelligent Manufacturing</span></li>
            <li><span> Student Volunteer @ MobiQuitous '22</span></li>
           
@@ -663,7 +699,7 @@ function topFunction() {
 		<tr>
       <td>
 		    <br>
-        <p align="center"><font size="2">Last update on Nov 2023 and <a href="http://www.cs.berkeley.edu/~barron/">big shout out to Jon</a></font></p>
+        <p align="center"><font size="2">Last update on May 2024 and <a href="http://www.cs.berkeley.edu/~barron/">big shout out to Jon for the template</a></font></p>
       </td>
     </tr>
     </table>
@@ -694,6 +730,10 @@ hideblock('earface_abs');
 
 <script xml:space="preserve" language="JavaScript">
 hideblock('signquery_abs');
+</script>
+
+<script xml:space="preserve" language="JavaScript">
+hideblock('aslring_abs');
 </script>
 
 
