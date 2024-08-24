@@ -1,0 +1,8 @@
+@inproceedings{zhou2024uwborient,
+  title={Rethinking Orientation Estimation with Smartphone-equipped Ultra-wideband Chips},
+  author={Zhou, Hao and and Yuan, Kuang and Gowda, Mahanth and Qiu, Lili and Xiong, Jie},
+  booktitle={The 30th Annual International Conference on Mobile Computing and Networking (ACM MobiCom '24)},
+  year={2024},
+  address={Washington D.C., USA},
+  publisher={ACM, New York, NY, USA},
+}
