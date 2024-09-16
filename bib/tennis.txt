@@ -1,0 +1,10 @@
+@article{liu2024smartdampener,
+  title={SmartDampener: An Open Source Platform for Sport Analytics in Tennis},
+  author={Liu, Runze and Lu, Taiting and Yuan, Shengming and Zhou, Hao and Gowda, Mahanth},
+  journal={Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies},
+  volume={8},
+  number={3},
+  pages={1--30},
+  year={2024},
+  publisher={ACM New York, NY, USA}
+}

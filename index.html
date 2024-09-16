@@ -303,7 +303,7 @@ function topFunction() {
                 <a href="bib/uwborient.txt">bibtex</a> 
                 <!-- <a href="slides/aslring.pdf">slides</a>  -->
                  
-                <p align="justify"> <i id="uwborient_abs">While localization has gained a tremendous amount of attention from both academia and industry, much less attention has been paid to equally important orientation estimation. Traditional orientation estimation systems relying on gyroscopes suffer from cumulative errors. In this paper, we propose UWBOrient, the first fine-grained orientation estimation system utilizing ultra-wideband (UWB) modules embedded in smartphones. The proposed system presents an alternative solution that is more accurate than gyroscope estimates and free of error accumulation. We propose to fuse UWB estimates with gyroscope estimates to address the challenge associated with UWB estimation alone and further improve the estimation accuracy. UWBOrient decreases the estimation error from the state-of-the-art 7.6 degrees to 2.7 degrees whilemaintaining a low latency (20 ms) and low energy consumption (40 mWh). Comprehensive experiments with both iPhone and Android smartphones demonstrate the effectiveness of the proposed system under various conditions including natural motion, dynamic multipath and NLoS. Two real-world applications, i.e., head orientation tracking and 3D reconstruction are employed to showcase the practicality of UWBOrient</i></p>
+                <p align="justify"> <i id="uwborient_abs">While localization has gained a tremendous amount of attention from both academia and industry, much less attention has been paid to equally important orientation estimation. Traditional orientation estimation systems relying on gyroscopes suffer from cumulative errors. In this paper, we propose UWBOrient, the first fine-grained orientation estimation system utilizing ultra-wideband (UWB) modules embedded in smartphones. The proposed system presents an alternative solution that is more accurate than gyroscope estimates and free of error accumulation. We propose to fuse UWB estimates with gyroscope estimates to address the challenge associated with UWB estimation alone and further improve the estimation accuracy. UWBOrient decreases the estimation error from the state-of-the-art 7.6 degrees to 2.7 degrees whilemaintaining a low latency (20 ms) and low energy consumption (40 mWh). Comprehensive experiments with both iPhone and Android smartphones demonstrate the effectiveness of the proposed system under various conditions including natural motion, dynamic multipath and NLoS. Two real-world applications, i.e., head orientation tracking and 3D reconstruction are employed to showcase the practicality of UWBOrient.</i></p>
                 </div>
             </td>
         </tr>
@@ -320,6 +320,29 @@ function topFunction() {
 
 
 
+
+
+          <tr>
+            <td width="33%" valign="top"><a href="pubs/tennis.png"><img src="pubs/tennis.png" width="100%" style="border-style: none"></a>
+            <td width="67%" valign="top">
+              <p>
+              <a href="https://dl.acm.org/doi/10.1145/3678507" id="">
+              <heading>SmartDampener: An Open Source Platform for Sport Analytics in Tennis</heading></a><br>
+              <FONT COLOR="#777777">Runze Liu, Taiting Lu, Shengming Yuan, </FONT><strong>Hao Zhou</strong>, <FONT COLOR="#777777">Mahanth Gowda</FONT>
+              
+              <br>
+              <em>ACM IMWUT/UbiComp</em>, 2024.
+              <br>
+              </p>
+
+              <div class="paper" id="tennis">
+                <a href="javascript:toggleblock('tennis_abs')">abstract</a> / 
+                <a href="bib/tennis.txt">bibtex</a> 
+                 
+                <p align="justify"> <i id="tennis_abs">In this paper, we introduce SmartDampener, an open-source tennis analytics platform that redefines the traditional understanding of vibration dampeners. Traditional vibration dampeners favored by both amateur and professional tennis players are utilized primarily to diminish vibration transmission and enhance racket stability. However, our platform uniquely merges wireless sensing technologies into a device that resembles a conventional vibration dampener, thereby offering a range of tennis performance metrics including ball speed, impact location, and stroke type. The design of SmartDampener adheres to the familiar form of this accessory, ensuring that (i) it is readily accepted by users and robust under real-play conditions such as ball-hitting, (ii) it has minimal impact on player performance, (iii) it is capable of providing a wide range of analytical insights, and (iv) it is extensible to other sports. Existing computer vision systems for tennis sensing such as Hawkeye and PlaySight, rely on hardware that costs millions of US dollars to deploy with complex setup procedures and is susceptible to lighting environments. Wearable devices and other tennis sensing accessories, such as Zepp Tennis sensor and TennisEye, using intrusive mounting locations, hinder user experience and impede player performance. In contrast, SmartDampener, a low-cost and compact tennis sensing device, notable for its socially accepted, lightweight, and scalable design, seamlessly melds into the form of a vibration dampener. SmartDampener exploits opportunities in SoC and form factor design of conventional dampeners to integrate the sensing units and micro-controllers on a two-layer flexible PCB, that is bent and enclosed inside a dampener case made of 3D printing TPU material, while maintaining the vibration dampening feature and further being enhanced by its extended battery life and the inclusion of wireless communication features. The overall cost is $9.42, with a dimension of 21.4 mm × 27.5 mm × 9.7 mm (W × L × H) and a weight of 6.1 g and 5.8 hours of battery life. In proof of SmartDampener’s performance in tennis analytics, we present various tennis analytic applications that exploit the capability of SmartDampener in capturing the correlations across string vibration, and racket motion, including the estimation of ball speed with a median error of 3.59 mph, estimation of ball impact location with accuracy of 3.03 cm, and classification of six tennis strokes with accuracy of 96.75%. Finally, extensive usability studies with 15 tennis players indicate high levels of social acceptance of form factor design for the SmartDampener dampener in comparison with alternative form factors, as well as its capability of sensing and analyzing tennis stroke in an accurate and robust manner. We believe this platform will enable exciting applications in other sports like badminton, fitness tracking, and injury prevention.</i></p>
+                </div>
+            </td>
+        </tr>
 
 
 
@@ -662,8 +685,8 @@ function topFunction() {
             <li><span> Program Committee for MobiCom'24 S3 Workshop</span></li>
             <li><span> Program Committee for MobiCom'24/MobiSys'24 Artifact Evaluation</span></li>
            <li><span> Reviewer for Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies, 2022, 2023, 2024</span></li>
-           <li><span> Reviewer for Transactions on Mobile Computing 2024</span></li>   
-           <li><span> Reviewer for ICLR 2025</span></li>
+           <li><span> Reviewer for Transactions on Mobile Computing, 2024</span></li>   
+           <li><span> Reviewer for ICLR, 2025</span></li>
            <li><span> Reviewer for Journal of Intelligent Manufacturing</span></li>
            <li><span> Student Volunteer @ MobiQuitous'22</span></li>
           
@@ -769,6 +792,11 @@ hideallbibs();
 <script xml:space="preserve" language="JavaScript">
 hideblock('earface_abs');
 </script>
+
+<script xml:space="preserve" language="JavaScript">
+hideblock('tennis_abs');
+</script>
+
 
 <script xml:space="preserve" language="JavaScript">
 hideblock('signquery_abs');
