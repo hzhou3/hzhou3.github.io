@@ -1,0 +1,7 @@
+@inproceedings{earco,
+  title={Know Your Heart Better: Multimodal Cardiac Output Monitoring using Earbuds},
+  author={Zhou, Hao and Rahman, Md Mahbubur and Morshed, Mehrab Bin and Li, Yunzhi and Islam, , Md Saiful and Zhang, Larry and Bae, Jungmok and  Rosa, Christina and Mendes, Wendy Berry and Kuang, Jilong},
+  booktitle={ICASSP 2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year={2025},
+  organization={IEEE}
+}
