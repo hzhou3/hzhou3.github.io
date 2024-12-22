@@ -244,6 +244,7 @@ function topFunction() {
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
         <tr><td>
                     <ul>
+                      <span> [2024-12] Two papers from the internship at Samsung Research America got accepted to ICASSP'25.</span><br>
                       <span> [2024-10] Received Student Travel Grant from MobiCom'24.</span><br>
                       <span> [2024-10] I will serve as a student voluteer at MobiCom'24.</span><br>
                       <span>  [2024-08] UWBOrient is accepted to MobiCom'24. See you in D.C.!</span><br>
@@ -289,6 +290,30 @@ function topFunction() {
 
 
 
+ <tr>
+            <td width="33%" valign="top"><a href="pubs/uwborient.png"><img src="pubs/uwborient.png" width="100%" style="border-style: none"></a>
+            <td width="67%" valign="top">
+              <p>
+              <a href="https://dl.acm.org/doi/abs/10.1145/3636534.3690677" id="">
+              <heading>Rethinking Orientation Estimation with Smartphone-equipped Ultra-wideband Chips</heading></a><br>
+              <strong>Hao Zhou</strong>, <FONT COLOR="#777777">Kuang Yuan, Mahanth Gowda, Lili Qiu, Jie Xiong</FONT>
+              <br>
+              <em>ACM MobiCom</em>, 2024.
+              <br>
+              </p>
+
+              <div class="paper" id="uwborient">
+                <a href="javascript:toggleblock('uwborient_abs')">abstract</a> / 
+                <!-- <a href="https://www.cse.psu.edu/∼mkg31/projects/aslring/">project page</a> /  -->
+                <a href="bib/uwborient.txt">bibtex</a> /
+                <a href="slides/uwborient.pdf">slides</a> 
+                 
+                <p align="justify"> <i id="uwborient_abs">While localization has gained a tremendous amount of attention from both academia and industry, much less attention has been paid to equally important orientation estimation. Traditional orientation estimation systems relying on gyroscopes suffer from cumulative errors. In this paper, we propose UWBOrient, the first fine-grained orientation estimation system utilizing ultra-wideband (UWB) modules embedded in smartphones. The proposed system presents an alternative solution that is more accurate than gyroscope estimates and free of error accumulation. We propose to fuse UWB estimates with gyroscope estimates to address the challenge associated with UWB estimation alone and further improve the estimation accuracy. UWBOrient decreases the estimation error from the state-of-the-art 7.6 degrees to 2.7 degrees whilemaintaining a low latency (20 ms) and low energy consumption (40 mWh). Comprehensive experiments with both iPhone and Android smartphones demonstrate the effectiveness of the proposed system under various conditions including natural motion, dynamic multipath and NLoS. Two real-world applications, i.e., head orientation tracking and 3D reconstruction are employed to showcase the practicality of UWBOrient.</i></p>
+                </div>
+            </td>
+        </tr>
+
+
 
 
           <tr>
@@ -299,14 +324,14 @@ function topFunction() {
               <heading>Know Your Heart Better: Multimodal Cardiac Output Monitoring using Earbuds</heading></a><br>
               <strong>Hao Zhou</strong>, <FONT COLOR="#777777">Md Mahbubur Rahman, Mehrab Bin Morshed, Yunzhi Li, Md Saiful Islam, Larry Zhang, Jungmok Bae, Christina Rosa, Wendy Berry Mendes, Jilong Kuang</FONT>
               <br>
-              <em>Preprint</em>, 2025
+              <em>ICASSP</em>, 2025
               <br>
               </p>
 
               <div class="paper" id="earco">
-                <a href="javascript:toggleblock('earco_abs')">abstract</a> 
+                <a href="javascript:toggleblock('earco_abs')">abstract</a>  /
                 <!-- <a href="https://www.cse.psu.edu/∼mkg31/projects/aslring/">project page</a> /  -->
-                <!-- <a href="bib/earco.txt">bibtex</a> / -->
+                <a href="bib/earco.txt">bibtex</a>
                 <!-- <a href="slides/earco.pdf">slides</a>  -->
                  
                 <p align="justify"> <i id="earco_abs">Cardiac Output (CO) is a critical indicator of health, offering insights into cardiac dysfunction, acute stress responses, and cognitive decline. Traditional CO monitoring methods, like impedance cardiography, are invasive and impractical for daily use, leading to a gap in continuous, non-invasive monitoring. Although recent advancements explored wearables on heart rate monitoring, these approaches face challenges in accurately estimating CO due to the indirect nature of the signals. To address these challenges, we introduce EarCO, a non-invasive multimodal CO monitoring system with Photoplethysmography and Ballistocardiogram signals on commodity earbuds. A novel feature fusion method is proposed to integrate raw signals and prior knowledge from both modalities, improving the system’s interpretability and accuracy. EarCO achieves a lower error of 1.080 L/min in the leave-one-subject-out settings with 62 subjects, making cardiovascular health monitoring accessible and practical for daily use.</i></p>
@@ -341,37 +366,53 @@ function topFunction() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         
+
+
+
+
+
+
+
+
+
+
           <tr>
-            <td width="33%" valign="top"><a href="pubs/uwborient.png"><img src="pubs/uwborient.png" width="100%" style="border-style: none"></a>
+            <td width="33%" valign="top"><a href="pubs/bcgacc.png"><img src="pubs/bcgacc.png" width="100%" style="border-style: none"></a>
             <td width="67%" valign="top">
               <p>
-              <a href="https://dl.acm.org/doi/abs/10.1145/3636534.3690677" id="">
-              <heading>Rethinking Orientation Estimation with Smartphone-equipped Ultra-wideband Chips</heading></a><br>
-              <strong>Hao Zhou</strong>, <FONT COLOR="#777777">Kuang Yuan, Mahanth Gowda, Lili Qiu, Jie Xiong</FONT>
+              <a href="" id="">
+              <heading>Optimizing Biomarkers from Earbud Ballistocardiogram: Calibration and Calibration-Free Algorithms for Accelerometer Axis Selection and Fusion</heading></a><br>
+              <FONT COLOR="#777777">Yunzhi Li, Md Mahbubur Rahman, Mehrab Bin Morshed, Md Saiful Islam,</FONT> <strong>Hao Zhou</strong>,<FONT COLOR="#777777"> Weinan Wang, Holland Ernst, Li Zhu, Jilong Kuang</FONT>
               <br>
-              <em>ACM MobiCom</em>, 2024.
+              <em>ICASSP</em>, 2025
               <br>
               </p>
 
-              <div class="paper" id="uwborient">
-                <a href="javascript:toggleblock('uwborient_abs')">abstract</a> / 
+              <div class="paper" id="bcgacc">
+                <a href="javascript:toggleblock('bcgacc_abs')">abstract</a> /
                 <!-- <a href="https://www.cse.psu.edu/∼mkg31/projects/aslring/">project page</a> /  -->
-                <a href="bib/uwborient.txt">bibtex</a> /
-                <a href="slides/uwborient.pdf">slides</a> 
+                <a href="bib/bcgacc.txt">bibtex</a>
+                <!-- <a href="slides/earco.pdf">slides</a>  -->
                  
-                <p align="justify"> <i id="uwborient_abs">While localization has gained a tremendous amount of attention from both academia and industry, much less attention has been paid to equally important orientation estimation. Traditional orientation estimation systems relying on gyroscopes suffer from cumulative errors. In this paper, we propose UWBOrient, the first fine-grained orientation estimation system utilizing ultra-wideband (UWB) modules embedded in smartphones. The proposed system presents an alternative solution that is more accurate than gyroscope estimates and free of error accumulation. We propose to fuse UWB estimates with gyroscope estimates to address the challenge associated with UWB estimation alone and further improve the estimation accuracy. UWBOrient decreases the estimation error from the state-of-the-art 7.6 degrees to 2.7 degrees whilemaintaining a low latency (20 ms) and low energy consumption (40 mWh). Comprehensive experiments with both iPhone and Android smartphones demonstrate the effectiveness of the proposed system under various conditions including natural motion, dynamic multipath and NLoS. Two real-world applications, i.e., head orientation tracking and 3D reconstruction are employed to showcase the practicality of UWBOrient.</i></p>
+                <p align="justify"> <i id="bcgacc_abs">The earbud-based ballistocardiogram (BCG) holds significant promise for monitoring diverse physiological signals, including stress, cardiac activity, and blood pressure. However, unlike traditional methods that measure the force component along the head-to-foot axis for enhanced BCG signal quality, ear-worn devices are prone to orientation misalignment, leading to significant variations in BCG morphology. To address this challenge, we propose two novel algorithms: one that employs sensor-to-body-segment calibration and another that applies a calibration-free, physiologically informed axis fusion method to enhance earbud-based BCG signals. We evaluate the performance of these approaches against existing methods in the literature, focusing on heart rate variability (HRV) estimation and morphological feature extraction. Through a comprehensive investigation, we aim to identify optimal strategies for obtaining high-quality BCG signals using ear-worn devices.</i></p>
                 </div>
             </td>
         </tr>
-
-
-
-
-
-
-
-
-
 
 
 
@@ -851,6 +892,11 @@ hideblock('tennis_abs');
 
 <script xml:space="preserve" language="JavaScript">
 hideblock('earco_abs');
+</script>
+
+
+<script xml:space="preserve" language="JavaScript">
+hideblock('bcgacc_abs');
 </script>
 
 
