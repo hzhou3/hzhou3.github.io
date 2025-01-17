@@ -1,0 +1,6 @@
+@inproceedings{Saiful,
+  title={BallistoBud: Heart Rate Variability Monitoring using Earbud Accelerometry for Stress Assessment},
+  author={Islam, Md Saiful and others},
+  booktitle={Proceedings of the 2025 chi conference on human factors in computing systems},
+  year={2025}
+}
