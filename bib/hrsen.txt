@@ -1,0 +1,6 @@
+@article{zhang2025hrscene,
+  title={HRScene: How Far Are VLMs from Effective High-Resolution Image Understanding?},
+  author={Zhang, Yusen and Zheng, Wenliang and Madasu, Aashrith and Shi, Peng and Kamoi, Ryo and Zhou, Hao and Zou, Zhuoyang and Zhao, Shu and Das, Sarkar Snigdha Sarathi and Gupta, Vipul and others},
+  journal={arXiv preprint arXiv:2504.18406},
+  year={2025}
+}
