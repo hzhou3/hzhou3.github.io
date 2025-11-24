@@ -1,0 +1,6 @@
+@inproceedings{zhou2026exploring,
+  title={Exploring the Feasibility of Full-Body Muscle Activation Sensing with Insole Pressure Sensors},
+  author={Zhou, Hao and Gowda, Mahanth },
+  booktitle={The 32th Annual International Conference on Mobile Computing and Networking (ACM MobiCom '26)},
+  year={2026},
+}

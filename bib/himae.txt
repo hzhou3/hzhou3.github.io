@@ -1,0 +1,6 @@
+@article{lee2025himae,
+  title={HiMAE: Hierarchical Masked Autoencoders Discover Resolution-Specific Structure in Wearable Time Series},
+  author={Lee, Simon A and Tanade, Cyrus and Zhou, Hao and Lee, Juhyeon and Thukral, Megha and Han, Minji and Choi, Rachel and Khan, Md Sazzad Hissain and Lu, Baiying and Gwak, Migyeong and others},
+  journal={arXiv preprint arXiv:2510.25785},
+  year={2025}
+}

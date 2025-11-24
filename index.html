@@ -173,11 +173,11 @@ function topFunction() {
               <p align="center"><font size="6px">Hao Zhou</font>
                 <br>hao *DOT* zhou *AT* psu *DOT* edu</p>
               <p>
-                I am currently in my fourth year of Ph.D. studies at PennState, under the guidance of <a href="https://www.cse.psu.edu/~mkg31/">Prof. Mahanth Gowda</a>. I was also fortunate to receive mentorship from <a href="https://jiexiong1.github.io/">Prof. Jie Xiong</a> during my internship at Microsoft Research Asia. 
+                I am currently in my final year of Ph.D. studies at PennState, under the guidance of <a href="https://www.cse.psu.edu/~mkg31/">Prof. Mahanth Gowda</a>. I was also fortunate to receive mentorship from <a href="https://jiexiong1.github.io/">Prof. Jie Xiong</a> during my internship at Microsoft Research Asia. 
               </p>
 
               <p>
-                <strong>My research lies in the span of mobile sensing. By various modalities (Ultra-wideband, IMU, Vision, Acoustics, etc.), I aim to bring insights to human lives in domains such as motion tracking, mobile health, and accessibility.</strong> 
+                <strong>My research reimagines human-centered AI systems with low-cost everyday wearables, unlocking a rich understanding of human behavior and physiology to promote scalable health, accessible interaction, and social good.</strong> 
               </p>  
               
 
@@ -185,14 +185,14 @@ function topFunction() {
 
               <!-- <p style="text-align:center"> "Brevity is the soul of wit" -- William Shakespeare  </p> -->
 
-              <p style="text-align:center;"> <FONT COLOR="#ff0000">I am happy to chat about my research, and open to collaboration on wearable and wireless sensing.</FONT> </p>
+              <p style="text-align:center;"> <FONT COLOR="#ff0000">I am on the job market this year, and welcome any feedback! &#128522; </FONT> </p>
         
               <br>
               <p style="text-align:center">
                 <a href="cv/cv.pdf">CV</a> &nbsp/&nbsp
                 <a href="https://scholar.google.com/citations?user=Oc7AeVYAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
                 <a href="https://github.com/hzhou3">Github</a> &nbsp/&nbsp
-                <a href="https://twitter.com/hao_zhh">X</a> &nbsp/&nbsp
+                <!-- <a href="https://twitter.com/hao_zhh">X</a> &nbsp/&nbsp -->
                 <a href="https://www.linkedin.com/in/hao-zhou-37953316b">LinkedIn</a> 
               </p>
             </td>
@@ -245,7 +245,8 @@ function topFunction() {
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
         <tr><td>
                     <ul>
-                  
+                    <span> [2025-11] Pressure2Muscle is conditionally accepted to MobiCom'26!</span><br>
+                      <span> [2025-10] Our wearable foundation model work (w/ Samsung) is accepted to NeurIPS TS4H, and a number of works is submitted ICLR 2026!</span><br>
                       <span> [2025-05] My thesis has been accepted to MobiSys' 25 Rising Star.</span><br>
                       <span> [2025-05] I will return to Samsung Research America for summer internship.</span><br>
                       <span> [2025-03] Recipient of Penn State's <strong>Alumni Association Dissertation Award (Only recipient from School of EECS)</strong>. <a href="https://www.psu.edu/news/fox-graduate-school/story/forty-two-graduate-students-recognized-university-awards">News.</a></span><br>
@@ -297,13 +298,127 @@ function topFunction() {
 
 
 
+ <tr>
+            <td width="33%" valign="top"><a href="pubs/pressure.png"><img src="pubs/pressure.png" width="100%" style="border-style: none"></a>
+            <td width="67%" valign="top">
+              <p>
+              <a href="" id="">
+              <heading>Exploring the Feasibility of Full-Body Muscle Activation Sensing with Insole Pressure Sensors</heading></a><br>
+              <strong>Hao Zhou</strong>, Mahanth Gowda.
+              <br>
+              <em>MobiCom</em>, 2026 (Conditionally accepted).
+              <br>
+              </p>
+
+              <div class="paper" id="pressure">
+                <a href="javascript:toggleblock('pressure_abs')">abstract</a>  /
+                <a href="bib/pressure.txt">bibtex</a>
+                 
+                <p align="justify"> <i id="pressure_abs">Muscle activation initiates contractions that drive human movement, and understanding it provides valuable insights for injury prevention and rehabilitation. Yet, sensing muscle activation is barely explored in the rapidly growing mobile health market. Traditional methods for muscle activation sensing rely on specialized electrodes, such as surface electromyography, making them impractical, especially in the long-term of free motion. In this paper, we introduce Press2Muscle, the first system to unobtrusively infer muscle activation using insole pressure sensors. The key idea is to analyze foot pressure changes resulting from full-body muscle activation that drives movements. To handle variations in pressure signals due to differences in users’ gait, weight, and movement styles, we propose a data-driven approach to dynamically adjust reliance on different foot regions and incorporate easily accessible biographical data to enhance Press2Muscle’s generalization to unseen users. We conducted an exten- sive study with 30 users. Under a leave-one-user-out setting, Press2Muscle achieves a root mean square error of 0.025, marking a 19% improvement over a video-based counterpart. A robustness study validates Press2Muscle’s ability to generalize across user demographics, footwear types, and walking surfaces. Additionally, we showcase muscle imbalance detection and muscle activation estimation under free-living settings with Press2Muscle, confirming the feasibility of muscle activation sensing using insole pressure sensors in real-world settings.</i></p>
+                </div>
+            </td>
+        </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <tr>
+            <td width="33%" valign="top"><a href="pubs/himae.png"><img src="pubs/himae.png" width="100%" style="border-style: none"></a>
+            <td width="67%" valign="top">
+              <p>
+              <a href="https://arxiv.org/pdf/2510.25785" id="">
+              <heading>HiMAE: Hierarchical Masked Autoencoders Discover Resolution-Specific Structure in Wearable Time Series</heading></a><br>
+              Simon A Lee, Cyrus Tanade, <strong>Hao Zhou</strong>, Juhyeon Lee, Megha Thukral, Minji Han, Rachel Choi, Md Sazzad Hissain Khan, Baiying Lu, Migyeong Gwak, Mehrab Bin Morshed, Viswam Nathan, Md Mahbubur Rahman, Li Zhu, Subramaniam Venkatraman, Sharanya Arcot Desai
+
+              <br>
+              <em>ArXiv</em>, 2026.
+              <br>
+              </p>
+
+              <div class="paper" id="himae">
+                <a href="javascript:toggleblock('himae_abs')">abstract</a>  /
+                <a href="bib/himae.txt">bibtex</a>
+                 
+                <p align="justify"> <i id="himae_abs">Wearable sensors provide abundant physiological time series, yet the principles governing their predictive utility remain unclear. We hypothesize that temporal resolution is a fundamental axis of representation learning, with different clinical and behavioral outcomes relying on structure at distinct scales. To test this resolution hypothesis, we introduce HiMAE (Hierarchical Masked Autoencoder), a self-supervised framework that combines masked autoencoding with a hierarchical convolutional encoder–decoder. HiMAE produces multi-resolution embeddings that enable systematic evaluation of which temporal scales carry predictive signal, transforming resolution from a hyperparameter into a probe for interpretability. Across classification, regression, and generative benchmarks, HiMAE consistently outperforms state-of-the-art foundation models that collapse scale, while being orders of magnitude smaller. HiMAE is an efficient representation learner compact enough to run entirely on-watch, achieving sub-millisecond inference on smartwatch-class CPUs for true edge inference. Together, these contributions position HiMAE as both an efficient self supervised learning method and a discovery tool for scale-sensitive structure in wearable health.</i></p>
+                </div>
+            </td>
+        </tr>
+
+
+
+
+
+
+
+
+
+ <tr>
+            <td width="33%" valign="top"><a href="pubs/ts4h.png"><img src="pubs/ts4h.png" width="67%" style="border-style: none"></a>
+            <td width="67%" valign="top">
+              <p>
+              <a href="https://openreview.net/pdf?id=i6DUa3k63o" id="">
+              <heading>Towards On-device Foundation Models for Wearable Signals</heading></a><br>
+              Simon Lee, Cyrus Tanade, <strong>Hao Zhou</strong>, Juhyeon Lee, Megha Thukral, Minji Han, Baiying Lu, and Sharanya Desai.
+              <br>
+              <em>NeurIPS TS4H</em>, 2026.
+              <br>
+              </p>
+
+              <div class="paper" id="ts4h">
+                <a href="javascript:toggleblock('ts4h_abs')">abstract</a>  /
+                <a href="bib/ts4h.txt">bibtex</a>
+                 
+                <p align="justify"> <i id="ts4h_abs">We propose a lightweight foundation model for wearable signals that leverages convolutional inductive biases within a masked autoencoder and U-Net CNN backbone. By explicitly encoding temporal locality and multi-scale structure, our approach aligns more naturally with the nonstationary dynamics of physiological waveforms than attention-based transformers. Pretrained on 80k hours of photoplethysmogram (PPG), the model matches or surpasses larger state-of-the-art baselines across ten clinical classification tasks. At the same time, it achieves two to three orders of magnitude reductions in parameters (0.31M vs. 110M), memory footprint (3.6MB vs. 441.3MB), and compute, while delivering substantial speedups (∼4× CPU, ∼20× GPU) with resolution flexibility. Together, these results establish compact convolutional self-supervised models as both scientifically aligned and practically scalable for potential real-time on-device healthcare monitoring</i></p>
+                </div>
+            </td>
+        </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
  <tr>
             <td width="33%" valign="top"><a href="pubs/rising.png"><img src="pubs/rising.png" width="100%" style="border-style: none"></a>
             <td width="67%" valign="top">
               <p>
-              <a href="" id="">
+              <a href="https://dl.acm.org/doi/abs/10.1145/3711875.3736682" id="">
               <heading>Rethinking Inexpensive Wearables in the Era of AI: From Motion Analytics to Mobile Health</heading></a><br>
               <strong>Hao Zhou</strong>
               <br>
@@ -933,6 +1048,18 @@ Ranran Haoran Zhang, Avitej Iyer, Renze Lou, Wenpeng Yin, Rui Zhang</FONT>
 
 <script xml:space="preserve" language="JavaScript">
 hideallbibs();
+</script>
+
+<script xml:space="preserve" language="JavaScript">
+hideblock('pressure_abs');
+</script>
+
+<script xml:space="preserve" language="JavaScript">
+hideblock('himae_abs');
+</script>
+
+<script xml:space="preserve" language="JavaScript">
+hideblock('ts4h_abs');
 </script>
 
 
