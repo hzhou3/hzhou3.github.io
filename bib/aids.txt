@@ -1,0 +1,7 @@
+@inproceedings{memoryaids,
+  title={A Personalized Real-time Proactive Voice Memory Assistant},
+  author={Zhou, Hao and Rahman, Md Mahbubur and Lee, Simon A.  and Lu, Baiying and Lee, Juhyeon and Tanade, Cyrus and Thukral, Megha and Hissain Khan, Md. Sazzad and Ul Islam, Samsad and Venkatraman, Subramaniam and Desai, Sharanya Arcot},
+  booktitle={ICASSP 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year={2026},
+  organization={IEEE}
+}
