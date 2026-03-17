@@ -1,0 +1,4 @@
+@inproceedings{xmae,
+  title={Physiology-Aware Masked Cross-Modal Reconstruction for Biosignal Representation Learning},
+  author={Zhou, Hao and et al.},
+}
