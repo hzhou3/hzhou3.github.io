@@ -616,19 +616,70 @@ footer {
 @media (max-width: 680px) {
   body {
     font-size: 16px;
+    line-height: 1.65;
   }
 
   .page {
-    padding: 0 18px 50px;
+    padding: 0 18px 52px;
+  }
+
+  /* Keep navigation visible on mobile */
+  #topnav {
+    height: auto;
+    min-height: var(--nav-h);
+  }
+
+  .nav-inner {
+    padding: 10px 18px 9px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .nav-name {
+    font-size: 15.5px;
+    line-height: 1.2;
+  }
+
+  .nav-links {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: flex-start;
+    padding-bottom: 2px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-links li {
+    flex: 0 0 auto;
+  }
+
+  .nav-links a {
+    display: block;
+    font-size: 12.5px;
+    line-height: 1.25;
+    padding: 5px 9px;
+    background: #f7f7f7;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    white-space: nowrap;
   }
 
   #bio {
-    padding-top: 32px;
+    padding-top: 34px;
   }
 
   .bio-top {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 26px;
     padding: 0;
   }
 
@@ -640,26 +691,31 @@ footer {
     font-size: 15px;
   }
 
-  .bio-kw {
-    white-space: normal;
+  .bio-keywords {
+    gap: 8px;
   }
 
-  /* Compact mobile bio card: photo/contact on top, icons below */
+  .bio-kw {
+    white-space: normal;
+    line-height: 1.35;
+  }
+
+  /* Mobile bio card: compact, but not squeezed */
   .bio-card {
     display: grid;
-    grid-template-columns: 112px minmax(0, 1fr);
+    grid-template-columns: 118px minmax(0, 1fr);
     align-items: stretch;
-    max-width: 100%;
     width: 100%;
-    margin: 0 auto;
+    max-width: 430px;
+    margin: 2px auto 0;
     border-radius: 14px;
   }
 
   .bio-card img {
     grid-column: 1;
     grid-row: 1;
-    width: 112px;
-    height: 112px;
+    width: 118px;
+    height: 118px;
     aspect-ratio: unset;
     object-fit: cover;
     border-radius: 0;
@@ -669,14 +725,15 @@ footer {
     grid-column: 2;
     grid-row: 1;
     min-width: 0;
-    padding: 12px 14px;
+    padding: 14px 16px;
     justify-content: center;
+    gap: 8px;
   }
 
   .bio-contact-row {
     font-size: 13px;
-    line-height: 1.35;
-    gap: 7px;
+    line-height: 1.4;
+    gap: 8px;
   }
 
   .bio-contact-row a,
@@ -688,15 +745,15 @@ footer {
   .bio-links {
     grid-column: 1 / -1;
     width: 100%;
-    padding: 10px 8px 12px;
-    flex-wrap: nowrap;
+    padding: 11px 10px 13px;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 6px;
+    gap: 8px;
   }
 
   .bio-icon-link {
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
     padding: 6px;
   }
 
@@ -707,43 +764,95 @@ footer {
 
   .openings-box {
     font-size: 14px;
-    padding: 12px 14px;
+    padding: 13px 15px;
+    margin-top: 26px;
+  }
+
+  .section {
+    padding: 34px 0;
+  }
+
+  .section-header {
+    margin-bottom: 18px;
+  }
+
+  /* News: more breathing room on mobile */
+  .news-list {
+    gap: 0;
   }
 
   .news-list li {
     display: block;
+    padding: 13px 0 14px;
+    border-bottom: 1px solid var(--border);
+    font-size: 15.5px;
+    line-height: 1.6;
+  }
+
+  .news-list li:first-child {
+    padding-top: 0;
+  }
+
+  .news-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
   }
 
   .news-date {
     display: block;
     width: auto;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  #news .section-content {
+    max-height: 360px;
+    padding-right: 8px;
   }
 
   .pub-row {
     grid-template-columns: 1fr;
+    gap: 13px;
   }
 
   .pub-thumb {
     max-width: 240px;
   }
 
-  /* Teaching mobile layout */
+  /* Teaching: turn rows into clean cards on mobile */
   .teaching-group {
     display: block;
-    margin-bottom: 24px;
+    margin-bottom: 26px;
+  }
+
+  .teaching-group:last-child {
+    margin-bottom: 0;
   }
 
   .teaching-institution {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    font-size: 15.5px;
+    line-height: 1.35;
   }
 
   .teaching-courses {
-    gap: 12px;
+    gap: 0;
   }
 
   .teaching-row {
     display: block;
+    padding: 12px 0 13px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .teaching-row:first-child {
+    padding-top: 0;
+  }
+
+  .teaching-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
   }
 
   .teaching-course {
@@ -754,9 +863,23 @@ footer {
   .teaching-term {
     text-align: left;
     white-space: normal;
-    margin-top: 2px;
+    margin-top: 5px;
     font-size: 14px;
+    line-height: 1.35;
     color: var(--muted);
+  }
+
+  .simple-list {
+    gap: 10px;
+    font-size: 15.5px;
+  }
+
+  .service-block {
+    margin-bottom: 20px;
+  }
+
+  .service-block ul {
+    gap: 6px;
   }
 
   /* Do not force 3 columns on phones */
@@ -764,83 +887,89 @@ footer {
   .misc-grid,
   .sponsor-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
+    gap: 20px 16px;
+  }
+
+  .group-card,
+  .misc-card,
+  .sponsor-grid-item {
+    font-size: 14.5px;
   }
 
   .group-card img {
     width: 110px;
     height: 110px;
   }
+}
+
+@media (max-width: 440px) {
+  .page {
+    padding: 0 16px 46px;
+  }
 
   .nav-inner {
-    padding: 0 18px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .nav-links a {
     font-size: 12px;
-    padding: 4px 7px;
-  }
-
-  .nav-name {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 440px) {
-  .nav-links {
-    display: none;
-  }
-
-  .page {
-    padding: 0 16px 44px;
+    padding: 5px 8px;
   }
 
   .bio-text h1 {
     font-size: 30px;
   }
 
-  .bio-keywords {
-    gap: 6px;
-  }
-
   .bio-card {
-    grid-template-columns: 96px minmax(0, 1fr);
+    grid-template-columns: 102px minmax(0, 1fr);
+    max-width: 100%;
   }
 
   .bio-card img {
-    width: 96px;
-    height: 96px;
+    width: 102px;
+    height: 102px;
   }
 
   .bio-card-body {
-    padding: 10px 12px;
+    padding: 12px 13px;
+    gap: 7px;
   }
 
   .bio-contact-row {
     font-size: 12.5px;
+    line-height: 1.35;
   }
 
   .bio-links {
-    gap: 5px;
-    padding: 9px 6px 11px;
+    gap: 7px;
+    padding: 10px 8px 12px;
   }
 
   .bio-icon-link {
-    width: 31px;
-    height: 31px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .news-list li {
+    padding: 14px 0 15px;
+  }
+
+  .teaching-row {
+    padding: 13px 0 14px;
   }
 
   .group-grid,
   .misc-grid,
   .sponsor-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 20px;
   }
 
   .sponsor-img,
   .misc-card-img {
     height: auto;
-    min-height: 90px;
+    min-height: 92px;
   }
 }
 
