@@ -614,25 +614,255 @@ footer {
 
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 680px) {
+  body {
+    font-size: 16px;
+  }
+
+  .page {
+    padding: 0 18px 50px;
+  }
+
+  #bio {
+    padding-top: 32px;
+  }
+
   .bio-top {
     grid-template-columns: 1fr;
+    gap: 24px;
     padding: 0;
   }
-  .bio-card { flex-direction: row; border-radius: 12px; }
-  .bio-card img { width: 120px; height: 120px; border-radius: 12px 0 0 12px; aspect-ratio: unset; }
-  .bio-card-body { padding: 10px 12px; }
-  .bio-links { padding: 8px 12px 12px; }
 
-  .group-grid, .misc-grid, .sponsor-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .bio-text h1 {
+    font-size: 31px;
+  }
 
-  .pub-row { grid-template-columns: 1fr; }
-  .pub-thumb { max-width: 240px; }
+  .bio-position {
+    font-size: 15px;
+  }
 
-  .nav-links a { font-size: 12px; padding: 4px 7px; }
-  .nav-name { font-size: 15px; }
+  .bio-kw {
+    white-space: normal;
+  }
+
+  /* Compact mobile bio card: photo/contact on top, icons below */
+  .bio-card {
+    display: grid;
+    grid-template-columns: 112px minmax(0, 1fr);
+    align-items: stretch;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 14px;
+  }
+
+  .bio-card img {
+    grid-column: 1;
+    grid-row: 1;
+    width: 112px;
+    height: 112px;
+    aspect-ratio: unset;
+    object-fit: cover;
+    border-radius: 0;
+  }
+
+  .bio-card-body {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+    padding: 12px 14px;
+    justify-content: center;
+  }
+
+  .bio-contact-row {
+    font-size: 13px;
+    line-height: 1.35;
+    gap: 7px;
+  }
+
+  .bio-contact-row a,
+  .bio-contact-row span {
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .bio-links {
+    grid-column: 1 / -1;
+    width: 100%;
+    padding: 10px 8px 12px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .bio-icon-link {
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+  }
+
+  .bio-icon-link svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .openings-box {
+    font-size: 14px;
+    padding: 12px 14px;
+  }
+
+  .news-list li {
+    display: block;
+  }
+
+  .news-date {
+    display: block;
+    width: auto;
+    margin-bottom: 2px;
+  }
+
+  .pub-row {
+    grid-template-columns: 1fr;
+  }
+
+  .pub-thumb {
+    max-width: 240px;
+  }
+
+  /* Teaching mobile layout */
+  .teaching-group {
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  .teaching-institution {
+    margin-bottom: 8px;
+  }
+
+  .teaching-courses {
+    gap: 12px;
+  }
+
+  .teaching-row {
+    display: block;
+  }
+
+  .teaching-course {
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+
+  .teaching-term {
+    text-align: left;
+    white-space: normal;
+    margin-top: 2px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  /* Do not force 3 columns on phones */
+  .group-grid,
+  .misc-grid,
+  .sponsor-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .group-card img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .nav-inner {
+    padding: 0 18px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    padding: 4px 7px;
+  }
+
+  .nav-name {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 440px) {
-  .nav-links { display: none; }
-  .group-grid, .misc-grid, .sponsor-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .nav-links {
+    display: none;
+  }
+
+  .page {
+    padding: 0 16px 44px;
+  }
+
+  .bio-text h1 {
+    font-size: 30px;
+  }
+
+  .bio-keywords {
+    gap: 6px;
+  }
+
+  .bio-card {
+    grid-template-columns: 96px minmax(0, 1fr);
+  }
+
+  .bio-card img {
+    width: 96px;
+    height: 96px;
+  }
+
+  .bio-card-body {
+    padding: 10px 12px;
+  }
+
+  .bio-contact-row {
+    font-size: 12.5px;
+  }
+
+  .bio-links {
+    gap: 5px;
+    padding: 9px 6px 11px;
+  }
+
+  .bio-icon-link {
+    width: 31px;
+    height: 31px;
+  }
+
+  .group-grid,
+  .misc-grid,
+  .sponsor-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .sponsor-img,
+  .misc-card-img {
+    height: auto;
+    min-height: 90px;
+  }
 }
+
+@media (max-width: 360px) {
+  .bio-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+  }
+
+  .bio-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  .bio-card-body {
+    width: 100%;
+  }
+
+  .bio-links {
+    flex-wrap: wrap;
+  }
+}
+
