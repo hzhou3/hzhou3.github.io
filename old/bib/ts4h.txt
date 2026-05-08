@@ -1,0 +1,5 @@
+@inproceedings{lee2025towards,
+  title={Towards on-device foundation models for raw wearable signals},
+  author={Lee, Simon A and Tanade, Cyrus and Zhou, Hao and Lee, Juhyeon and Thukral, Megha and Lu, Baiying and Desai, Sharanya Arcot},
+  booktitle={NeurIPS 2025 Workshop on Learning from Time Series for Health}
+}

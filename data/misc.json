@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Outstanding Teaching Assistant",
+    "subtitle": "Penn State",
+    "year": 2022,
+    "image": "misc/best_ta.png"
+  },
+  {
+    "title": "Alumni Association Dissertation Award",
+    "subtitle": "Penn State",
+    "year": 2025,
+    "image": "misc/thesis_award.png"
+  },
+  {
+    "title": "A1 Patent Inventor",
+    "subtitle": "Samsung Research America",
+    "year": 2025,
+    "image": "misc/a1.png"
+  }
+]

@@ -1,0 +1,5 @@
+[
+  { "name": "Penn State",            "logo": "sponsor/psu.png",  "url": "https://www.psu.edu" },
+  { "name": "NSF",                   "logo": "sponsor/nsf.png",  "url": "https://www.nsf.gov" },
+  { "name": "Samsung Research America", "logo": "sponsor/sra.webp", "url": "https://sra.samsung.com" }
+]

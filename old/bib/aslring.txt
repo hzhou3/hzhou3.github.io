@@ -1,0 +1,6 @@
+@article{zhou2024aslring,
+  title={ASLRing: American Sign Language Recognition with Meta-Learning on Wearables},
+  author={Zhou, Hao and Lu, Taiting and DeHaan, Kenneth and Gowda, Mahanth},
+  journal={IEEE/ACM IoTDI},
+  year={2024},
+}

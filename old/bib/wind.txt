@@ -1,0 +1,6 @@
+@article{yuan2025sonicsieve,
+  title={SonicSieve: Bringing Directional Speech Extraction to Smartphones Using Acoustic Microstructures},
+  author={Yuan, Kuang and Wang, Yifeng and Zhang, Xiyuxing and Shen, Chengyi and Kumar, Swarun and Chan, Justin},
+  journal={arXiv preprint arXiv:2504.10793},
+  year={2025}
+}

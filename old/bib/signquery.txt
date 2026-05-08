@@ -1,0 +1,10 @@
+@inproceedings{zhou2023signquery,
+  title={SignQuery: A Natural User Interface and Search Engine for Sign Languages with Wearable Sensors},
+  author={Zhou, Hao and Lu, Taiting and McKinnie, Kristina and Palagano, Joseph and DeHaan, Kenneth and Gowda, Mahanth},
+  booktitle={The 29th Annual International Conference on Mobile Computing and Networking (ACM MobiCom '23)},
+  pages={1--16},
+  year={2023},
+  address={Madrid, Spain},
+  publisher={ACM, New York, NY, USA},
+  doi={https://doi.org/10.1145/3570361.3613286}
+}

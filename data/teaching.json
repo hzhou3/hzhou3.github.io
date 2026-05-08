@@ -1,0 +1,20 @@
+[
+  {
+    "code": "CMPEN/EE 362",
+    "title": "Communication Networks",
+    "institution": "Penn State",
+    "terms": ["FA'25"]
+  },
+  {
+    "code": "CMPEN 462",
+    "title": "Wireless Communication Systems and Security",
+    "institution": "Penn State",
+    "terms": ["SP'22", "SP'24"]
+  },
+  {
+    "code": "CSE/EE 559",
+    "title": "Wireless and Mobile Sensing in the Age of IoT",
+    "institution": "Penn State",
+    "terms": ["FA'24"]
+  }
+]

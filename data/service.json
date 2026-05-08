@@ -1,0 +1,19 @@
+{
+  "program_committee": [
+    "MobiCom'24 S3 Workshop",
+    "MobiCom'24 Artifact Evaluation",
+    "MobiSys'24 Artifact Evaluation"
+  ],
+  "reviewer": [
+    "IMWUT/Ubicomp, 2022–2026",
+    "ICML, 2026",
+    "ICLR, 2024–2026",
+    "NeurIPS, 2026",
+    "IEEE Transactions on Mobile Computing, 2024–2026",
+    "ACM Transactions on Sensor Networks, 2024"
+  ],
+  "volunteer": [
+    "MobiCom 2024",
+    "MobiQuitous 2022"
+  ]
+}

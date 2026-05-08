@@ -1,0 +1,7 @@
+@inproceedings{Li2025,
+  title={Optimizing Biomarkers from Earbud Ballistocardiogram: Calibration and Calibration-Free Algorithms for Accelerometer Axis Selection and Fusion},
+  author={Li, Yunzhi and Rahman, Md Mahbubur and Morshed, Mehrab Bin and Islam, Md Saiful and Zhou, Hao and Wang, Weinan and Ernst, Holland and Zhu, Li and Kuang, Jilong},
+  booktitle={ICASSP 2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year={2025},
+  organization={IEEE}
+}

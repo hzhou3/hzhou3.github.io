@@ -1,0 +1,10 @@
+@inproceedings{thesis_zhou_hao,
+author = {Zhou, Hao},
+title = {Rethinking Inexpensive Wearables in the Era of AI: From Motion Analytics to Mobile Health},
+year = {2025},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+booktitle = {Proceedings of the 23rd Annual International Conference on Mobile Systems, Applications and Services},
+numpages = {2},
+series = {MOBISYS '25}
+}

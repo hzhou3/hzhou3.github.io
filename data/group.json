@@ -1,0 +1,30 @@
+[
+  {
+    "name": "name 1",
+    "photo": "group/student1.jpg",
+    "role": "PhD Student",
+    "year_start": 2026,
+    "website": null
+  },
+  {
+    "name": "name 2",
+    "photo": "group/student2.jpg",
+    "role": "PhD Student",
+    "year_start": 2026,
+    "website": null
+  },
+  {
+    "name": "name 3",
+    "photo": "group/student3.jpg",
+    "role": "PhD Student",
+    "year_start": 2026,
+    "website": null
+  },
+  {
+    "name": "name 4",
+    "photo": "group/student4.jpg",
+    "role": "PhD Student",
+    "year_start": 2026,
+    "website": null
+  }
+]
