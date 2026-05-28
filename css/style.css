@@ -757,6 +757,10 @@ footer {
     padding: 6px;
   }
 
+  .bio-icon-link i {
+    font-size: 36px;
+  }
+
   .bio-icon-link svg {
     width: 16px;
     height: 16px;
