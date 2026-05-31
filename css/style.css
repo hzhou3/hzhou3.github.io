@@ -751,11 +751,22 @@ footer {
     gap: 8px;
   }
 
+    
   .bio-icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border: 1.5px solid #c5d9f5;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--accent);
     width: 34px;
     height: 34px;
-    padding: 6px;
+    flex-shrink: 0;
+    transition: background .15s, color .15s, border-color .15s;
   }
+
 
   .bio-icon-link i {
     font-size: 36px;
@@ -950,10 +961,6 @@ footer {
     padding: 10px 8px 12px;
   }
 
-  .bio-icon-link {
-    width: 32px;
-    height: 32px;
-  }
 
   .news-list li {
     padding: 14px 0 15px;
