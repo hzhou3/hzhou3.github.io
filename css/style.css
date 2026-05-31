@@ -235,8 +235,8 @@ a:hover, a:focus { color: var(--accent-h); }
   border-radius: 8px;
   background: #fff;
   color: var(--accent);
-  width: 34px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
   flex-shrink: 0;
   transition: background .15s, color .15s, border-color .15s;
 }
