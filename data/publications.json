@@ -11,6 +11,7 @@
     "paper": "https://arxiv.org/abs/2605.00973",
     "code": "https://github.com/hzhou3/xMAE",
     "bibtex": "bib/xmae.txt",
+    "slides": "slides/xmae_poster.pdf",
     "abstract": "Biosignals acquired from different locations on the body often provide temporally ordered views of the same underlying physiological process. However, most existing self-supervised learning methods treat these signals as interchangeable views, overlooking the directional temporal dynamics that link them. A canonical example is the relationship between electrocardiography (ECG), which captures the electrical activation initiating each heartbeat, and photoplethysmography (PPG), which records the resulting peripheral pulse delayed by vascular dynamics. To capture this structured relationship, we introduce xMAE, a biosignal pretraining framework that leverages masked cross-modal reconstruction across temporally ordered biosignals as a training-time constraint to encourage physiologically meaningful timing structure in the learned representations."
   },
   {
