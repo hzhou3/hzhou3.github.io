@@ -1,0 +1,15 @@
+{
+    "vision": "We build AI-powered wearable systems to understand human health and behavior in everyday life. Our work spans machine learning methods and low-cost sensing prototypes that transform raw signals into meaningful insights, helping people improve their daily lives.",
+    "thrusts": [
+    {
+      "title": "AI for Wearables",
+      "summary": "We develop efficient AI algorithms to turn raw, noisy, multimodal streams from wearables to reliable insights.",
+      "pubs": ["xmae", "sslotr", "aslring", "himae", "ts4h", "signquery"]
+    },
+    {
+      "title": "New Sensing Capacity",
+      "summary": "We discover new sensing capacities that enable more precise understanding of human states.",
+      "pubs": ["pressure", "earco", "uwborient", "omniring", "bcghrv",  "earface"]
+    }
+  ]
+}

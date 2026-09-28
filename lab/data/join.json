@@ -1,0 +1,22 @@
+{
+  "roles": [
+    {
+      "title": "PhD Students",
+      "icon": "fa-solid fa-graduation-cap",
+      "text": "We are recruiting PhD students interested in wearable systems, mobile sensing, and AI for health and accessibility. Background in systems, machine learning, signal processing, or hardware prototyping is welcome.",
+      "subject": "[UTD PhD] Your Name"
+    },
+    {
+      "title": "UTD MS Students",
+      "icon": "fa-solid fa-flask",
+      "text": "Current UT Dallas master's students interested in research or a thesis are welcome to reach out. Please include your transcript and any relevant project experience.",
+      "subject": "[UTD MS] Your Name"
+    },
+    {
+      "title": "UTD Undergraduates",
+      "icon": "fa-solid fa-lightbulb",
+      "text": "UT Dallas undergraduates who are curious about research are encouraged to get involved, for example through independent study or senior projects. No prior research experience is required.",
+      "subject": "[UTD Undergrad] Your Name"
+    }
+  ]
+}

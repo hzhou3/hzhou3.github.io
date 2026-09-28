@@ -152,6 +152,7 @@ a:hover, a:focus { color: var(--accent-h); }
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
+  margin-bottom: 32px;
 }
 
 .bio-kw {

@@ -1,0 +1,18 @@
+{
+  "_template": {
+    "_how_to": "Copy this object into the members list below (members appear in list order). Put the photo in lab/people/ (square works best). Only name is required.",
+    "name": "Firstname Lastname",
+    "photo": "people/firstname.jpg",
+    "role": "PhD Student",
+    "website": "https://example.com"
+  },
+
+  "members": [
+    {
+      "name": "Hao Zhou",
+      "photo": "../images/hao.JPG",
+      "role": "Principal Investigator",
+      "website": "../"
+    }
+  ]
+}

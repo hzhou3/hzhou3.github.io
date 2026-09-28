@@ -1,0 +1,195 @@
+/* ── HAI·L lab page: additions on top of ../css/style.css ──── */
+
+a.nav-name { color: var(--text); }
+a.nav-name:hover { color: var(--accent); }
+
+/* ── Welcome ─────────────────────────────────────────────── */
+#welcome {
+  padding: 52px 0 36px;
+}
+
+.lab-name {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+.lab-short { color: var(--accent); }
+
+.lab-vision {
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--text);
+  border-left: 4px solid var(--accent);
+  padding: 2px 0 2px 16px;
+}
+
+/* ── Research ────────────────────────────────────────────── */
+.thrust { margin-bottom: 30px; }
+
+.thrust-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.thrust-head h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.thrust-num {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thrust-summary {
+  color: var(--muted);
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+.paper-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.paper-card {
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  transition: border-color .15s, box-shadow .15s;
+}
+a.paper-card:hover {
+  color: var(--text);
+  border-color: #c5d9f5;
+  box-shadow: 0 2px 10px rgba(23, 114, 208, 0.10);
+}
+
+.paper-thumb {
+  aspect-ratio: 16 / 10;
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--border);
+}
+.paper-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.paper-venue {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  padding: 8px 10px 0;
+  line-height: 1.3;
+}
+
+.paper-title {
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 3px 10px 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.join-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.join-role {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.join-title {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.join-title i { color: var(--accent); }
+
+/* ── People ──────────────────────────────────────────────── */
+.group-photo-placeholder {
+  width: 130px;
+  height: 130px;
+  border-radius: 10px;
+  margin: 0 auto 10px;
+  background: var(--bg-alt);
+  border: 1.5px dashed #c8c8c8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b0b0b0;
+  font-size: 30px;
+}
+
+a.join-card { color: var(--muted); display: block; }
+a.join-card:hover { color: var(--accent); }
+a.join-card:hover .group-photo-placeholder {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── Join Us ─────────────────────────────────────────────── */
+.join-role p { margin-bottom: 8px; }
+
+.join-subject {
+  font-size: 13px;
+  color: var(--muted);
+}
+.join-subject code {
+  font-size: 12.5px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 5px;
+  white-space: nowrap;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 680px) {
+  #welcome { padding: 34px 0 30px; }
+  .lab-name { font-size: 29px; }
+  .lab-vision { font-size: 16.5px; }
+
+  .paper-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .join-grid { grid-template-columns: 1fr; }
+
+  .group-photo-placeholder { width: 110px; height: 110px; }
+}
+
+@media (max-width: 440px) {
+  .lab-name { font-size: 26px; }
+  .join-subject code { white-space: normal; }
+}
