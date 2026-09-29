@@ -112,7 +112,7 @@ function renderResearch(r, pubs) {
 
 // ── People ─────────────────────────────────────────────────
 // Schema: people.json { members:[{name, photo?, role?, website?}] }
-// Photo paths are relative to lab/. Members appear in list order.
+// Photo paths are relative to hai/. Members appear in list order.
 function renderPeople(data) {
   const el = document.getElementById('people-content');
   if (!el) return;

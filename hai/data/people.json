@@ -1,6 +1,6 @@
 {
   "_template": {
-    "_how_to": "Copy this object into the members list below (members appear in list order). Put the photo in lab/people/ (square works best). Only name is required.",
+    "_how_to": "Copy this object into the members list below (members appear in list order). Put the photo in hai/people/ (square works best). Only name is required.",
     "name": "Firstname Lastname",
     "photo": "people/firstname.jpg",
     "role": "PhD Student",
