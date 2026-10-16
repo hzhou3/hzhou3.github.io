@@ -90,7 +90,7 @@ a:hover, a:focus { color: var(--accent-h); }
 
 /* ── Bio Section ─────────────────────────────────────────── */
 #bio {
-  padding: 48px 0 0;
+  padding: 48px 0 32px;
 }
 
 /* Top row: text left, card right */
@@ -139,33 +139,6 @@ a:hover, a:focus { color: var(--accent-h); }
 
 .bio-text p { margin-bottom: 12px; }
 
-.bio-interests-label {
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: var(--muted);
-  margin: 16px 0 8px;
-}
-
-.bio-keywords {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin-bottom: 32px;
-}
-
-.bio-kw {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--accent);
-  background: #eef4fd;
-  border: 1px solid #c5d9f5;
-  border-radius: 20px;
-  padding: 3px 11px;
-  white-space: nowrap;
-}
-
 /* Right column: photo card */
 .bio-card {
   display: flex;
@@ -187,7 +160,7 @@ a:hover, a:focus { color: var(--accent-h); }
 
 .bio-card-body {
   width: 100%;
-  padding: 14px 16px 10px;
+  padding: 14px 16px;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -216,42 +189,40 @@ a:hover, a:focus { color: var(--accent-h); }
   word-break: break-all;
 }
 
-/* Links row: below card body, inside card */
+/* Links row: full width under the bio, centered on the page */
 .bio-links {
-  width: 100%;
-  border-top: 1px solid var(--border);
-  padding: 10px 8px 14px;
   display: flex;
-  flex-wrap: nowrap;
-  gap: 5px;
+  flex-wrap: wrap;
   justify-content: center;
+  row-gap: 4px;
+  margin-top: 28px;
 }
 
 .bio-icon-link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  padding: 6px;
-  border: 1.5px solid #c5d9f5;
-  border-radius: 8px;
-  background: #fff;
-  color: var(--accent);
-  width: 30px;
-  height: 30px;
-  flex-shrink: 0;
-  transition: background .15s, color .15s, border-color .15s;
+  gap: 7px;
+  padding: 5px 0;
+  color: var(--text);
+  font-size: 14.5px;
+  font-weight: 700;
+  line-height: 1.4;
 }
-.bio-icon-link svg {
-  width: 17px;
-  height: 17px;
-  display: block;
-  flex-shrink: 0;
+.bio-icon-link:hover,
+.bio-icon-link:focus {
+  color: var(--text);
 }
-.bio-icon-link span { display: none; }
-.bio-icon-link:hover {
-  background: var(--accent);
-  color: #fff;
-  border-color: var(--accent);
+/* "/" between links */
+.bio-icon-link + .bio-icon-link::before {
+  content: "/";
+  color: var(--muted);
+  font-weight: 400;
+  margin: 0 3px 0 10px;
+}
+.bio-icon-link:hover span,
+.bio-icon-link:focus span {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* ── Section ─────────────────────────────────────────────── */
@@ -692,15 +663,6 @@ footer {
     font-size: 15px;
   }
 
-  .bio-keywords {
-    gap: 8px;
-  }
-
-  .bio-kw {
-    white-space: normal;
-    line-height: 1.35;
-  }
-
   /* Mobile bio card: compact, but not squeezed */
   .bio-card {
     display: grid;
@@ -744,38 +706,16 @@ footer {
   }
 
   .bio-links {
-    grid-column: 1 / -1;
-    width: 100%;
-    padding: 11px 10px 13px;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
+    margin-top: 22px;
   }
 
-    
   .bio-icon-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 6px;
-    border: 1.5px solid #c5d9f5;
-    border-radius: 8px;
-    background: #fff;
-    color: var(--accent);
-    width: 34px;
-    height: 34px;
-    flex-shrink: 0;
-    transition: background .15s, color .15s, border-color .15s;
+    font-size: 14px;
+    gap: 5px;
   }
 
-
-  .bio-icon-link i {
-    font-size: 36px;
-  }
-
-  .bio-icon-link svg {
-    width: 16px;
-    height: 16px;
+  .bio-icon-link + .bio-icon-link::before {
+    margin: 0 1px 0 6px;
   }
 
   .openings-box {
@@ -957,11 +897,6 @@ footer {
     line-height: 1.35;
   }
 
-  .bio-links {
-    gap: 7px;
-    padding: 10px 8px 12px;
-  }
-
 
   .news-list li {
     padding: 14px 0 15px;
@@ -1000,10 +935,6 @@ footer {
 
   .bio-card-body {
     width: 100%;
-  }
-
-  .bio-links {
-    flex-wrap: wrap;
   }
 }
 
