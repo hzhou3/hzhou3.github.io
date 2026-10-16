@@ -35,17 +35,15 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(e => console.error('Failed to load research:', e));
 
-  load('data/media.json').then(renderMedia)
-    .catch(e => console.error('Failed to load media coverage:', e));
+  Promise.all([load('data/photos.json'), load('data/media.json')])
+    .then(([photos, media]) => renderHighlights(photos, media))
+    .catch(e => console.error('Failed to load highlights:', e));
 
   load('data/people.json').then(renderPeople)
     .catch(e => console.error('Failed to load people:', e));
 
   load('data/join.json').then(renderJoin)
     .catch(e => console.error('Failed to load join:', e));
-
-  load('data/photos.json').then(renderPhotos)
-    .catch(e => console.error('Failed to load photos:', e));
 
   load('../data/sponsor.json').then(renderSponsor)
     .catch(e => console.error('Failed to load sponsors:', e));
@@ -126,28 +124,6 @@ function renderResearch(r, pubs) {
   el.innerHTML = thrusts;
 }
 
-// ── Media Coverage ─────────────────────────────────────────
-// Schema: media.json [{ year, topic, outlet, url, image? }]
-// Image paths are relative to hai/. The image links to the article; a missing
-// image leaves an empty grey frame. Shown in list order (newest first).
-function renderMedia(items) {
-  const el = document.getElementById('media-grid');
-  if (!el) return;
-  el.innerHTML = items.map(m => `
-<figure class="photo-card">
-  <a class="photo-img photo-img-contain" href="${esc(m.url)}" target="_blank">
-    ${m.image ? `<img src="${esc(m.image)}" alt="${esc(m.topic)}" loading="lazy" onerror="this.remove()">` : ''}
-  </a>
-  <figcaption>
-    <p class="photo-caption">${esc(m.topic)}</p>
-    <p class="photo-meta">
-      <span><i class="fa-regular fa-newspaper"></i>${esc(m.outlet)}</span>
-      <span><i class="fa-regular fa-calendar"></i>${esc(m.year)}</span>
-    </p>
-  </figcaption>
-</figure>`).join('');
-}
-
 // ── People ─────────────────────────────────────────────────
 // Schema: people.json { members:[{name, photo?, role?, website?}] }
 // Photo paths are relative to hai/. Members appear in list order.
@@ -205,35 +181,47 @@ function renderSponsor(sponsors) {
   }).join('');
 }
 
-// ── Lab Photos ─────────────────────────────────────────────
-// Schema: photos.json [{ image, who, what, where?, when? }]
-// Caption reads "<who> <what>", e.g. "Hao Zhou" + "received the ... Award".
-// Image paths are relative to hai/. Shown newest first by the year in `when`.
-// An empty list shows "To come."
-function renderPhotos(photos) {
-  const el = document.getElementById('photos-grid');
+// ── Highlights ─────────────────────────────────────────────
+// Awards and talks (photos.json) and press coverage (media.json) in one grid,
+// newest first by year; within a year, press comes first, then list order.
+// photos.json [{ image, who, what, where?, when? }]  caption "<who> <what>",
+//   image opens full size
+// media.json  [{ year, topic, outlet, url, image? }]  image opens the article
+// Image paths are relative to hai/. Nothing in either list shows "To come."
+function renderHighlights(photos, media) {
+  const el = document.getElementById('highlights-grid');
   if (!el) return;
-  if (!photos.length) {
+
+  const yearOf = v => +((String(v || '').match(/\d{4}/) || [0])[0]);
+  const icon = (cls, text) => `<span><i class="${cls}"></i>${esc(text)}</span>`;
+
+  const items = [
+    ...media.map(m => ({
+      year: yearOf(m.year), image: m.image, href: m.url, contain: true,
+      caption: m.topic,
+      meta: [icon('fa-regular fa-newspaper', m.outlet), m.year && icon('fa-regular fa-calendar', m.year)],
+    })),
+    ...photos.map(p => ({
+      year: yearOf(p.when), image: p.image, href: p.image, contain: false,
+      caption: [p.who, p.what].filter(Boolean).join(' '),
+      meta: [p.where && icon('fa-solid fa-location-dot', p.where), p.when && icon('fa-regular fa-calendar', p.when)],
+    })),
+  ].sort((a, b) => b.year - a.year);
+
+  if (!items.length) {
     el.outerHTML = '<p class="photos-empty">To come.</p>';
     return;
   }
-  // newest first by the year in `when`; same-year photos keep their list order
-  const year = p => +((String(p.when || '').match(/\d{4}/) || [0])[0]);
-  photos = [...photos].sort((a, b) => year(b) - year(a));
 
-  el.innerHTML = photos.map(p => {
-    const caption = esc([p.who, p.what].filter(Boolean).join(' '));
-    const meta = [
-      p.where && `<span><i class="fa-solid fa-location-dot"></i>${esc(p.where)}</span>`,
-      p.when  && `<span><i class="fa-regular fa-calendar"></i>${esc(p.when)}</span>`,
-    ].filter(Boolean).join('');
+  el.innerHTML = items.map(h => {
+    const meta = h.meta.filter(Boolean).join('');
     return `
 <figure class="photo-card">
-  <a class="photo-img" href="${esc(p.image)}" target="_blank">
-    <img src="${esc(p.image)}" alt="${esc([p.who, p.what].filter(Boolean).join(' '))}" loading="lazy">
+  <a class="photo-img${h.contain ? ' photo-img-contain' : ''}" href="${esc(h.href)}" target="_blank">
+    ${h.image ? `<img src="${esc(h.image)}" alt="${esc(h.caption)}" loading="lazy" onerror="this.remove()">` : ''}
   </a>
   <figcaption>
-    <p class="photo-caption">${caption}</p>
+    <p class="photo-caption">${esc(h.caption)}</p>
     ${meta ? `<p class="photo-meta">${meta}</p>` : ''}
   </figcaption>
 </figure>`;
