@@ -413,7 +413,7 @@ a:hover, a:focus { color: var(--accent-h); }
 }
 
 .pub-links a {
-  color: var(--accent);
+  color: var(--text);
   font-weight: 500;
 }
 .pub-links a:hover { color: var(--accent-h); }
@@ -423,7 +423,7 @@ a:hover, a:focus { color: var(--accent-h); }
   border: none;
   padding: 0;
   cursor: pointer;
-  color: var(--accent);
+  color: var(--text);
   font-size: 14.5px;
   font-family: inherit;
   font-weight: 500;
