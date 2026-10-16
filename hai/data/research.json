@@ -3,12 +3,12 @@
     "thrusts": [
     {
       "title": "AI for Wearables",
-      "summary": "We develop efficient AI algorithms to turn raw, noisy, multimodal streams from wearables to reliable insights.",
+      "summary": "We develop efficient AI algorithms to turn multimodal wearables streams to reliable human-centered insights.",
       "pubs": ["xmae", "sslotr", "aslring", "himae", "ts4h", "signquery"]
     },
     {
       "title": "New Sensing Capacity",
-      "summary": "We discover new sensing capacities that enable more precise understanding of human states.",
+      "summary": "We unlock new sensing capabilities that open a fresh lens into human states.",
       "pubs": ["pressure", "earco", "uwborient", "omniring", "bcghrv",  "earface"]
     }
   ]

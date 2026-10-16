@@ -18,7 +18,7 @@
     "id": "pressure",
     "title": "Exploring the Feasibility of Full-Body Muscle Activation Sensing with Insole Pressure Sensors",
     "authors": [{"name": "Hao Zhou", "self": true}, {"name": "Mahanth Gowda"}],
-    "venue": "MobiCom",
+    "venue": "ACM MobiCom",
     "year": 2026,
     "topics": ["Wearables", "Health", "Behavior"],
     "thumb": "pubs/pressure.png",

@@ -119,8 +119,6 @@ a.paper-card:hover {
 }
 
 /* ── Publications page ───────────────────────────────────── */
-.nav-links a[aria-current="page"] { color: var(--accent); }
-
 .pubs-page {
   border-top: none;
   padding-top: 48px;
