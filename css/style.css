@@ -2,8 +2,28 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --accent:   #1772d0;
-  --accent-h: #e07b20;
+  /* UT Dallas orange */
+  --utd-orange:      #e87500;  /* bars, number badges */
+  --utd-orange-dark: #c25700;  /* readable on white: link text, button fills */
+  --utd-orange-bg:   #fff4e8;
+  --utd-orange-bd:   #f3c99a;
+
+  /* UT Dallas green */
+  --utd-green:       #154734;
+  --utd-green-bg:    #edf5f0;
+  --utd-green-bd:    #b7d4c1;
+
+  /* ── Link color for the whole site (personal + lab pages) ──
+     Change these lines to switch. Previous blue: #1772d0 / #e07b20 / #f0f5fc / #c5d9f5 */
+  --link-color:   var(--utd-orange-dark);  /* text links, titles, venues   */
+  --link-hover:   var(--utd-green);        /* every link on hover          */
+  --link-tint:    var(--utd-green-bg);     /* hover background (nav)       */
+  --link-tint-bd: var(--utd-green-bd);     /* hover border (paper cards)   */
+
+  --accent:      var(--link-color);
+  --accent-h:    var(--link-hover);
+  --accent-tint: var(--link-tint);
+
   --text:     #222;
   --muted:    #555;
   --border:   #e0e0e0;
@@ -76,9 +96,11 @@ a:hover, a:focus { color: var(--accent-h); }
   border-radius: 4px;
   transition: color .15s, background .15s;
 }
+/* section currently in view (set by the scroll observer) */
+.nav-links a.active { color: var(--accent); }
 .nav-links a:hover {
-  color: var(--accent);
-  background: #f0f5fc;
+  color: var(--accent-h);
+  background: var(--accent-tint);
 }
 
 /* ── Page Wrapper ────────────────────────────────────────── */
@@ -203,14 +225,14 @@ a:hover, a:focus { color: var(--accent-h); }
   align-items: center;
   gap: 7px;
   padding: 5px 0;
-  color: var(--text);
+  color: var(--link-color);
   font-size: 14.5px;
   font-weight: 700;
   line-height: 1.4;
 }
 .bio-icon-link:hover,
 .bio-icon-link:focus {
-  color: var(--text);
+  color: var(--link-hover);
 }
 /* "/" between links */
 .bio-icon-link + .bio-icon-link::before {
@@ -320,8 +342,8 @@ a:hover, a:focus { color: var(--accent-h); }
   transition: background .15s, color .15s, border-color .15s;
 }
 .topic-chip:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--accent-h);
+  color: var(--accent-h);
 }
 .topic-chip.active {
   background: var(--accent);

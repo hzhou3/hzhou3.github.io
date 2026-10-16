@@ -29,10 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        navLinks.forEach(a => {
-          a.style.color = a.getAttribute('href') === '#' + entry.target.id
-            ? 'var(--accent)' : '';
-        });
+        navLinks.forEach(a =>
+          a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id)
+        );
       }
     });
   }, { rootMargin: '-40% 0px -55% 0px' });

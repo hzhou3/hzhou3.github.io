@@ -1,7 +1,9 @@
 /* ── HAI·L lab page: additions on top of ../css/style.css ──── */
 
+/* Colors (UT Dallas orange, link color) are defined once in ../css/style.css :root */
+
 a.nav-name { color: var(--text); }
-a.nav-name:hover { color: var(--accent); }
+a.nav-name:hover { color: var(--accent-h); }
 
 /* ── Welcome ─────────────────────────────────────────────── */
 #welcome {
@@ -20,8 +22,42 @@ a.nav-name:hover { color: var(--accent); }
   font-size: 18px;
   line-height: 1.65;
   color: var(--text);
-  border-left: 4px solid var(--accent);
+  border-left: 4px solid var(--utd-orange);
   padding: 2px 0 2px 16px;
+}
+
+/* Recruiting notice under the vision (UTD orange) */
+.recruit-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 26px;
+  padding: 14px 18px;
+  background: var(--utd-orange-bg);
+  border: 1.5px solid var(--utd-orange-bd);
+  border-radius: 10px;
+}
+.recruit-box p {
+  font-size: 16.5px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+.recruit-btn {
+  flex-shrink: 0;
+  background: var(--utd-orange-dark);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 7px 18px;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: background .15s;
+}
+.recruit-btn:hover,
+.recruit-btn:focus {
+  background: var(--link-hover);
+  color: #fff;
 }
 
 /* ── Research ────────────────────────────────────────────── */
@@ -45,7 +81,7 @@ a.nav-name:hover { color: var(--accent); }
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--utd-orange);
   color: #fff;
   font-size: 14px;
   font-weight: 700;
@@ -77,8 +113,8 @@ a.nav-name:hover { color: var(--accent); }
 }
 a.paper-card:hover {
   color: var(--text);
-  border-color: #c5d9f5;
-  box-shadow: 0 2px 10px rgba(23, 114, 208, 0.10);
+  border-color: var(--link-tint-bd);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
 .paper-thumb {
@@ -167,10 +203,10 @@ a.paper-card:hover {
 }
 
 a.join-card { color: var(--muted); display: block; }
-a.join-card:hover { color: var(--accent); }
+a.join-card:hover { color: var(--accent-h); }
 a.join-card:hover .group-photo-placeholder {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--accent-h);
+  color: var(--accent-h);
 }
 
 /* ── Highlights ──────────────────────────────────────────────── */
@@ -286,6 +322,14 @@ a.join-card:hover .group-photo-placeholder {
   #welcome { padding: 34px 0 30px; }
   .lab-name { font-size: 29px; }
   .lab-vision { font-size: 16.5px; }
+
+  .recruit-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 13px 15px;
+  }
+  .recruit-box p { font-size: 15px; }
 
   /* phones: every card grid is two by two, like Our Research */
   .paper-grid,
