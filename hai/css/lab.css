@@ -16,8 +16,6 @@ a.nav-name:hover { color: var(--accent); }
   margin-bottom: 20px;
 }
 
-.lab-short { color: var(--accent); }
-
 .lab-vision {
   font-size: 18px;
   line-height: 1.65;
@@ -113,6 +111,21 @@ a.paper-card:hover {
   overflow: hidden;
 }
 
+.research-more {
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 8px;
+  white-space: nowrap;
+}
+
+/* ── Publications page ───────────────────────────────────── */
+.nav-links a[aria-current="page"] { color: var(--accent); }
+
+.pubs-page {
+  border-top: none;
+  padding-top: 48px;
+}
+
 .join-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -120,6 +133,8 @@ a.paper-card:hover {
 }
 
 .join-role {
+  display: flex;
+  flex-direction: column;
   background: var(--bg-alt);
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -160,10 +175,85 @@ a.join-card:hover .group-photo-placeholder {
   color: var(--accent);
 }
 
+/* ── Photos ──────────────────────────────────────────────── */
+.photos-empty { color: var(--muted); }
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px 20px;
+}
+
+.photo-card { margin: 0; }
+
+.photo-img {
+  display: block;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--bg-alt);
+  margin-bottom: 10px;
+}
+.photo-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity .15s;
+}
+.photo-img:hover img { opacity: .9; }
+
+/* People: same 4:3 frame as Lab Photos; crop from the upper part to keep faces */
+.person-img img {
+  margin: 0;
+  border-radius: 0;
+  object-position: center 25%;
+}
+.person-img .group-photo-placeholder {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+/* Sponsors: logos shown whole in the same 4:3 space, without a visible frame */
+.photo-img.sponsor-logo {
+  padding: 6%;
+  margin-bottom: 0;
+  border: none;
+  background: none;
+}
+
+/* graphics with text (e.g. media coverage) are shown whole, not cropped */
+.photo-img-contain {
+  background: #fff;
+  border: 1px solid var(--border);
+}
+.photo-img-contain img { object-fit: contain; }
+
+.photo-caption {
+  font-size: 15px;
+  line-height: 1.45;
+  margin-bottom: 4px;
+}
+
+.photo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 14px;
+  font-size: 13.5px;
+  color: var(--muted);
+}
+.photo-meta i {
+  margin-right: 5px;
+  opacity: .7;
+}
+
 /* ── Join Us ─────────────────────────────────────────────── */
 .join-role p { margin-bottom: 8px; }
 
+/* pinned to the bottom so subjects line up across the cards */
 .join-subject {
+  margin-top: auto;
   font-size: 13px;
   color: var(--muted);
 }
@@ -174,6 +264,10 @@ a.join-card:hover .group-photo-placeholder {
   border-radius: 4px;
   padding: 1px 5px;
   white-space: nowrap;
+  /* own line under the label, so every card's subject has the same height */
+  display: block;
+  width: fit-content;
+  margin-top: 3px;
 }
 
 /* ── Responsive ──────────────────────────────────────────── */
@@ -185,11 +279,12 @@ a.join-card:hover .group-photo-placeholder {
   .paper-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
   .join-grid { grid-template-columns: 1fr; }
+  .photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
-  .group-photo-placeholder { width: 110px; height: 110px; }
 }
 
 @media (max-width: 440px) {
   .lab-name { font-size: 26px; }
   .join-subject code { white-space: normal; }
+  .photo-grid { grid-template-columns: 1fr; }
 }

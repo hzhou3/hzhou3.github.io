@@ -1,0 +1,30 @@
+[
+  {
+    "image": "../misc/best_ta.png",
+    "who": "Hao Zhou",
+    "what": "received the Outstanding Teaching Assistant Award.",
+    "where": "Penn State",
+    "when": "2022"
+  },
+  {
+    "image": "../misc/thesis_award.png",
+    "who": "Hao Zhou",
+    "what": "received the Penn State Alumni Association Dissertation Award.",
+    "where": "Penn State",
+    "when": "2025"
+  },
+  {
+    "image": "../misc/a1.png",
+    "who": "Hao Zhou",
+    "what": "was recognized as an A1 Patent Inventor.",
+    "where": "Samsung Research America",
+    "when": "2025"
+  },
+  {
+    "image": "../misc/auburn_talk.jpg",
+    "who": "Hao Zhou",
+    "what": "gave an online talk on wearable intelligence for healthcare.",
+    "where": "Auburn University",
+    "when": "2026"
+  }
+]

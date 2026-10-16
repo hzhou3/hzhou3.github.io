@@ -17,6 +17,13 @@ function rootPath(p) {
 // ── Boot ───────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
 
+  // publications.html: only the shared publication list (renderPubs in ../js/pubs.js)
+  if (document.getElementById('pub-list')) {
+    load('../data/publications.json').then(pubs => renderPubs(pubs, rootPath))
+      .catch(e => console.error('Failed to load publications:', e));
+    return;
+  }
+
   load('../data/news.json').then(renderNews)
     .catch(e => console.error('Failed to load news:', e));
 
@@ -28,11 +35,20 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(e => console.error('Failed to load research:', e));
 
+  load('data/media.json').then(renderMedia)
+    .catch(e => console.error('Failed to load media coverage:', e));
+
   load('data/people.json').then(renderPeople)
     .catch(e => console.error('Failed to load people:', e));
 
   load('data/join.json').then(renderJoin)
     .catch(e => console.error('Failed to load join:', e));
+
+  load('data/photos.json').then(renderPhotos)
+    .catch(e => console.error('Failed to load photos:', e));
+
+  load('../data/sponsor.json').then(renderSponsor)
+    .catch(e => console.error('Failed to load sponsors:', e));
 
   // active nav highlight
   const navSections = document.querySelectorAll('.section[id]');
@@ -110,6 +126,28 @@ function renderResearch(r, pubs) {
   el.innerHTML = thrusts;
 }
 
+// ── Media Coverage ─────────────────────────────────────────
+// Schema: media.json [{ year, topic, outlet, url, image? }]
+// Image paths are relative to hai/. The image links to the article; a missing
+// image leaves an empty grey frame. Shown in list order (newest first).
+function renderMedia(items) {
+  const el = document.getElementById('media-grid');
+  if (!el) return;
+  el.innerHTML = items.map(m => `
+<figure class="photo-card">
+  <a class="photo-img photo-img-contain" href="${esc(m.url)}" target="_blank">
+    ${m.image ? `<img src="${esc(m.image)}" alt="${esc(m.topic)}" loading="lazy" onerror="this.remove()">` : ''}
+  </a>
+  <figcaption>
+    <p class="photo-caption">${esc(m.topic)}</p>
+    <p class="photo-meta">
+      <span><i class="fa-regular fa-newspaper"></i>${esc(m.outlet)}</span>
+      <span><i class="fa-regular fa-calendar"></i>${esc(m.year)}</span>
+    </p>
+  </figcaption>
+</figure>`).join('');
+}
+
 // ── People ─────────────────────────────────────────────────
 // Schema: people.json { members:[{name, photo?, role?, website?}] }
 // Photo paths are relative to hai/. Members appear in list order.
@@ -125,21 +163,21 @@ function renderPeople(data) {
       ? `<a href="${esc(m.website)}"${/^https?:/.test(m.website) ? ' target="_blank"' : ''}><strong>${esc(m.name)}</strong></a>`
       : `<strong>${esc(m.name)}</strong>`;
     return `
-<div class="group-card">
-  ${photo}
+<div class="group-card person-card">
+  <div class="photo-img person-img">${photo}</div>
   <div class="member-name">${nameTag}</div>
   ${m.role ? `<div class="member-role">${esc(m.role)}</div>` : ''}
 </div>`;
   };
 
   const joinCard = `
-<a class="group-card join-card" href="#join">
-  <div class="group-photo-placeholder"><i class="fa-solid fa-plus"></i></div>
+<a class="group-card person-card join-card" href="#join">
+  <div class="photo-img person-img"><div class="group-photo-placeholder"><i class="fa-solid fa-plus"></i></div></div>
   <div class="member-name">This could be you</div>
   <div class="member-role">Join Us →</div>
 </a>`;
 
-  el.innerHTML = `<div class="group-grid">${(data.members || []).map(card).join('')}${joinCard}</div>`;
+  el.innerHTML = `<div class="photo-grid">${(data.members || []).map(card).join('')}${joinCard}</div>`;
 }
 
 // ── Join Us ────────────────────────────────────────────────
@@ -153,4 +191,51 @@ function renderJoin(j) {
   <p>${esc(r.text)}</p>
   ${r.subject ? `<div class="join-subject">Email subject: <code>${esc(r.subject)}</code></div>` : ''}
 </div>`).join('')}</div>`;
+}
+
+// ── Sponsors (shared ../data/sponsor.json) ─────────────────
+// Schema: { name, logo, url? } — logo paths are relative to the site root
+function renderSponsor(sponsors) {
+  const el = document.getElementById('sponsor-grid');
+  if (!el) return;
+  el.innerHTML = sponsors.map(s => {
+    const img = `<img src="${esc(rootPath(s.logo))}" alt="${esc(s.name)}">`;
+    const tag = s.url ? 'a' : 'div';
+    return `<${tag} class="photo-img photo-img-contain sponsor-logo"${s.url ? ` href="${esc(s.url)}" target="_blank"` : ''}>${img}</${tag}>`;
+  }).join('');
+}
+
+// ── Lab Photos ─────────────────────────────────────────────
+// Schema: photos.json [{ image, who, what, where?, when? }]
+// Caption reads "<who> <what>", e.g. "Hao Zhou" + "received the ... Award".
+// Image paths are relative to hai/. Shown newest first by the year in `when`.
+// An empty list shows "To come."
+function renderPhotos(photos) {
+  const el = document.getElementById('photos-grid');
+  if (!el) return;
+  if (!photos.length) {
+    el.outerHTML = '<p class="photos-empty">To come.</p>';
+    return;
+  }
+  // newest first by the year in `when`; same-year photos keep their list order
+  const year = p => +((String(p.when || '').match(/\d{4}/) || [0])[0]);
+  photos = [...photos].sort((a, b) => year(b) - year(a));
+
+  el.innerHTML = photos.map(p => {
+    const caption = esc([p.who, p.what].filter(Boolean).join(' '));
+    const meta = [
+      p.where && `<span><i class="fa-solid fa-location-dot"></i>${esc(p.where)}</span>`,
+      p.when  && `<span><i class="fa-regular fa-calendar"></i>${esc(p.when)}</span>`,
+    ].filter(Boolean).join('');
+    return `
+<figure class="photo-card">
+  <a class="photo-img" href="${esc(p.image)}" target="_blank">
+    <img src="${esc(p.image)}" alt="${esc([p.who, p.what].filter(Boolean).join(' '))}" loading="lazy">
+  </a>
+  <figcaption>
+    <p class="photo-caption">${caption}</p>
+    ${meta ? `<p class="photo-meta">${meta}</p>` : ''}
+  </figcaption>
+</figure>`;
+  }).join('');
 }

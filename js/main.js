@@ -11,16 +11,6 @@ function load(path) { return fetch(path).then(r => r.json()); }
 // ── Boot ───────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
 
-  // abstract toggles (delegated — works on dynamic content)
-  document.addEventListener('click', e => {
-    const btn = e.target.closest('[data-toggle]');
-    if (!btn) return;
-    const target = document.getElementById(btn.dataset.toggle);
-    if (!target) return;
-    const open = target.classList.toggle('open');
-    btn.textContent = open ? 'hide abstract' : 'abstract';
-  });
-
   // render all sections
   const sections = [
     ['data/news.json',         renderNews],
@@ -28,8 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     ['data/publications.json', renderPubs],
     ['data/teaching.json',     renderTeaching],
     ['data/service.json',      renderService],
-    ['data/sponsor.json',      renderSponsor],
-    ['data/misc.json',         renderMisc],
   ];
   sections.forEach(([path, fn]) =>
     load(path).then(fn).catch(e => console.error(`Failed to load ${path}:`, e))
@@ -89,81 +77,7 @@ function renderGroup(members) {
   }).join('');
 }
 
-// ── Publications ───────────────────────────────────────────
-// Schema: { id, title, authors:[{name,self?}], venue, year,
-//           thumb?, paper?, bibtex?, code?, slides?, project?,
-//           award?, note?, abstract?, topics? }
-function renderPubs(pubs) {
-  const el = document.getElementById('pub-list');
-  if (!el) return;
-
-  // collect ordered unique topics
-  const allTopics = [];
-  pubs.forEach(p => (p.topics || []).forEach(t => {
-    if (!allTopics.includes(t)) allTopics.push(t);
-  }));
-
-  // render filter bar
-  const filterBar = document.getElementById('pub-filter');
-  if (filterBar && allTopics.length) {
-    filterBar.innerHTML =
-      `<button class="topic-chip active" data-topic="all">All</button>` +
-      allTopics.map(t => `<button class="topic-chip" data-topic="${esc(t)}">${esc(t)}</button>`).join('');
-
-    let active = 'all';
-    filterBar.addEventListener('click', e => {
-      const chip = e.target.closest('.topic-chip');
-      if (!chip) return;
-      active = chip.dataset.topic;
-      filterBar.querySelectorAll('.topic-chip').forEach(c =>
-        c.classList.toggle('active', c.dataset.topic === active)
-      );
-      el.querySelectorAll('.pub-row').forEach(row => {
-        const topics = (row.dataset.topics || '').split('|');
-        row.style.display = (active === 'all' || topics.includes(active)) ? '' : 'none';
-      });
-    });
-  }
-
-  el.innerHTML = pubs.map(p => {
-    const authors = p.authors.map(a =>
-      a.self ? `<strong>${esc(a.name)}</strong>` : esc(a.name)
-    ).join(', ');
-
-    const venueStr = p.award
-      ? `<em>${esc(p.venue)}</em>, ${p.year}. <span class="award">🏆 ${esc(p.award)}</span>`
-      : `<em>${esc(p.venue)}</em>, ${p.year}.${p.note ? ' <span class="pub-note">' + esc(p.note) + '</span>' : ''}`;
-
-    const links = [];
-    if (p.abstract) links.push(`<button data-toggle="abs-${p.id}">abstract</button>`);
-    if (p.bibtex)   links.push(`<a href="${esc(p.bibtex)}">bibtex</a>`);
-    if (p.slides)   links.push(`<a href="${esc(p.slides)}">slides</a>`);
-    if (p.code)     links.push(`<a href="${esc(p.code)}" target="_blank">code</a>`);
-    if (p.project)  links.push(`<a href="${esc(p.project)}" target="_blank">project page</a>`);
-
-    const titleTag = p.paper
-      ? `<a class="pub-title" href="${esc(p.paper)}" target="_blank">${esc(p.title)}</a>`
-      : `<span class="pub-title" style="color:var(--text)">${esc(p.title)}</span>`;
-
-    const thumb = p.thumb
-      ? `<a href="${esc(p.thumb)}" target="_blank"><img class="pub-thumb" src="${esc(p.thumb)}" alt="${esc(p.title)}"></a>`
-      : `<div class="pub-thumb-placeholder"></div>`;
-
-    const topicsAttr = (p.topics || []).join('|');
-
-    return `
-<div class="pub-row" data-topics="${esc(topicsAttr)}">
-  ${thumb}
-  <div class="pub-info">
-    ${titleTag}
-    <div class="pub-authors">${authors}.</div>
-    <div class="pub-venue">${venueStr}</div>
-    ${links.length ? `<div class="pub-links">${links.join('')}</div>` : ''}
-    ${p.abstract ? `<div class="pub-abstract" id="abs-${p.id}">${esc(p.abstract)}</div>` : ''}
-  </div>
-</div>`;
-  }).join('');
-}
+// ── Publications ── rendered by js/pubs.js (shared with the lab page)
 
 // ── Teaching ───────────────────────────────────────────────
 // // Schema: { code?, title, institution?, terms? }
@@ -237,39 +151,6 @@ function renderService(data) {
 <div class="service-block">
   <h3>${esc(label)}</h3>
   <ul>${lis}</ul>
-</div>`;
-  }).join('');
-}
-
-// ── Sponsor ────────────────────────────────────────────────
-// Schema: { name, logo, url? }
-function renderSponsor(sponsors) {
-  const el = document.getElementById('sponsor-grid');
-  if (!el) return;
-  el.innerHTML = sponsors.map(s => {
-    const img = `<img src="${esc(s.logo)}" alt="${esc(s.name)}">`;
-    const wrapped = s.url
-      ? `<a href="${esc(s.url)}" target="_blank">${img}</a>`
-      : img;
-    return `<div class="sponsor-grid-item"><div class="sponsor-img">${wrapped}</div></div>`;
-  }).join('');
-}
-
-// ── Misc ───────────────────────────────────────────────────
-// Schema: { title, subtitle?, year?, image?, link? }
-function renderMisc(items) {
-  const el = document.getElementById('misc-grid');
-  if (!el) return;
-  el.innerHTML = items.map(m => {
-    const img = m.image
-      ? `<div class="misc-card-img"><img src="${esc(m.image)}" alt="${esc(m.title)}"></div>`
-      : '';
-    const sub = [m.subtitle, m.year].filter(Boolean).join(' · ');
-    return `
-<div class="misc-card">
-  ${img}
-  <div class="misc-title">${esc(m.title)}</div>
-  ${sub ? `<div class="misc-sub">${esc(sub)}</div>` : ''}
 </div>`;
   }).join('');
 }

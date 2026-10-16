@@ -1,5 +1,5 @@
 [
-  { "name": "University of Texas at Dallas", "logo": "sponsor/utd.webp", "url": "https://engineering.utdallas.edu/" },
+  { "name": "University of Texas at Dallas", "logo": "sponsor/utd.png", "url": "https://engineering.utdallas.edu/" },
   { "name": "Samsung Research America", "logo": "sponsor/sra.webp", "url": "https://sra.samsung.com" },
   { "name": "NSF",                   "logo": "sponsor/nsf.png",  "url": "https://www.nsf.gov" }
 ]

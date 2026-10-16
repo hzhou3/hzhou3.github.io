@@ -1,0 +1,16 @@
+[
+  {
+    "year": 2026,
+    "topic": "xMAE is featured at Samsung Global Newsroom.",
+    "outlet": "Samsung Global Newsroom",
+    "url": "https://news.samsung.com/global/from-biosignals-to-health-insights-samsung-researchs-work-on-health-foundation-models",
+    "image": "../misc/xmae_samsung_news.png"
+  },
+  {
+    "year": 2025,
+    "topic": "Hao Zhou is featured at Penn State News.",
+    "outlet": "Penn State News",
+    "url": "https://www.psu.edu/news/fox-graduate-school/story/forty-two-graduate-students-recognized-university-awards",
+    "image": "../misc/psu.png"
+  }
+]
