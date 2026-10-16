@@ -67,7 +67,7 @@ function renderPubs(pubs, resolve = p => p) {
 
     const titleTag = p.paper
       ? `<a class="pub-title" href="${url(p.paper)}" target="_blank">${esc(p.title)}</a>`
-      : `<span class="pub-title" style="color:var(--text)">${esc(p.title)}</span>`;
+      : `<span class="pub-title">${esc(p.title)}</span>`;
 
     const thumb = p.thumb
       ? `<a href="${url(p.thumb)}" target="_blank"><img class="pub-thumb" src="${url(p.thumb)}" alt="${esc(p.title)}"></a>`

@@ -377,7 +377,7 @@ a:hover, a:focus { color: var(--accent-h); }
 .pub-title {
   font-size: 16px;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--text);
   line-height: 1.4;
   display: block;
   margin-bottom: 5px;
