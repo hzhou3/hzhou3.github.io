@@ -57,7 +57,7 @@
   {
     "id": "ts4h",
     "title": "Towards On-device Foundation Models for Wearable Signals",
-    "authors": [{"name": "Simon Lee"}, {"name": "Cyrus Tanade"}, {"name": "Hao Zhou", "self": true}, {"name": "Juhyeon Lee"}, {"name": "Megha Thukral"}, {"name": "Minji Han"}, {"name": "Baiying Lu"}, {"name": "Sharanya Desai"}],
+    "authors": [{"name": "Simon A. Lee"}, {"name": "Cyrus Tanade"}, {"name": "Hao Zhou", "self": true}, {"name": "Juhyeon Lee"}, {"name": "Megha Thukral"}, {"name": "Minji Han"}, {"name": "Baiying Lu"}, {"name": "Sharanya Desai"}],
     "venue": "NeurIPS TS4H",
     "year": 2026,
     "topics": ["Health", "Machine Learning", "On-device AI"],
