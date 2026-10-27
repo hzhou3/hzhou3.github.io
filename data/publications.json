@@ -51,9 +51,9 @@
     ],
     "venue": "Under Review",
     "year": 2026,
-    "topics": ["Health"],
+    "topics": ["Health", "Machine Learning"],
     "thumb": "pubs/xmae-cardiac.png",
-    "paper": "https://hzhou3.github.io/",
+    "paper": "https://hzhou3.github.io/#publications",
     "bibtex": "bib/xmae.txt",
     "abstract": "Precise beat-to-beat timing underpins heart rate variability (HRV) and cardiac rhythm assessment, informing clinical decision-making. Photoplethysmography (PPG) in smartwatches and rings offers the potential to extend these assessments into daily life at unprecedented scale. However, conventional methods use PPG pulse-to-pulse intervals as proxies for electrocardiographic (ECG) beat-to-beat intervals, overlooking vascular influences on pulse timing and leaving information across the full waveform underexploited. To bridge this scalability--fidelity gap, we developed xMAE, a wearable PPG foundation model that learns ECG-informed cardiac timing from paired ECG--PPG recordings. Trained using data from 20,884 participants and evaluated across wearable cohorts totaling 5,541 participants, {\name} produces PPG representations that support precise HRV estimation and cardiac rhythm assessment. Relative to supervised PPG learning, xMAE reduced error across five variability-sensitive HRV measures by 18.5--51.4% (all Benjamini--Hochberg-adjusted P<0.01), achieved a macro-AUROC of 0.978 for distinguishing normal rhythm, atrial fibrillation (AFib) and ectopic beats, and reduced clinically important rhythm-classification errors by 30.8--33.3%. With limited clinical rhythm annotations, {\name} achieved a three-class rhythm-detection AUROC of 0.808, representing a 19.4% relative improvement over supervised PPG learning. In external evaluation, participants (N=2,367) with self-reported AFib history were flagged as having AFib-like episodes 4.74-fold more often than those without self-reported AFib history. These findings show that xMAE enables more precise HRV estimation and rhythm assessment while preserving the scalability of wearable PPG."
   },
