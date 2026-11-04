@@ -77,14 +77,82 @@ function renderNews(items) {
 }
 
 // ── Welcome ────────────────────────────────────────────────
-// Schema: research.json { vision }
+// Schema: research.json { vision?, why?:[{title, role, icon?, text, tags?:[{icon, label}]}], cycle?:[fwd, back],
+//   context?:{icon, label, factors?:[{icon, label, arc: top|bottom, pos: 0..1}]}, whyStyle? }
+// Two "why" entries + cycle labels render as a loop: card 1 ⇄ card 2.
+// context draws a frame around the loop (the cycle happens within people's environments);
+// each factor is an icon placed on the dashed loop, pos = fraction along the arc (left → right).
+// Placement logic: the top arc (learning → building) carries the physical conditions that shape
+// the signals we sense; the bottom arc (deployment → new needs) carries the settings systems
+// are deployed into, leaving from "Building" (right) and returning to "Learning" (left).
+// whyStyle picks the design: "v1" (tinted cards, arrows between) or "v2" (white cards
+// joined by looping arcs). Preview the other one with ?why=v1 or ?why=v2 in the URL.
 function renderWelcome(r) {
   const el = document.getElementById('lab-vision');
-  if (el) el.innerHTML = esc(r.vision);
+  if (!el) return;
+  const style = new URLSearchParams(location.search).get('why') || r.whyStyle || 'v1';
+  const icon = c => c.icon ? `<i class="${esc(c.icon)}" aria-hidden="true"></i>` : '';
+  let html = r.vision ? `<p class="lab-vision-text">${esc(r.vision)}</p>` : '';
+  const card = w =>
+    `<div class="why-card"><div class="why-head">` +
+    (w.icon ? `<span class="why-icon">${icon(w)}</span>` : '') +
+    `<div><span class="lab-why-role">${esc(w.role)}</span>` +
+    `<strong class="lab-why-title">${esc(w.title)}</strong></div></div>` +
+    `<span class="lab-why-text">${esc(w.text)}</span>` +
+    (w.tags && w.tags.length ? `<div class="why-tags">` +
+      w.tags.map(t => `<span class="why-tag">${icon(t)}${esc(t.label)}</span>`).join('') + `</div>` : '') +
+    `</div>`;
+
+  // curved arrows between the cards: forward arcs over the top (left → right),
+  // back arcs underneath (right → left), so together they read as a loop
+  const arcArrow = dir => {
+    const id = `why-ah-${dir}`;
+    const d = dir === 'fwd' ? 'M6 26 Q45 -8 82 22' : 'M84 4 Q45 38 8 8';
+    return `<svg class="why-arc-arrow" viewBox="0 0 90 30" aria-hidden="true">` +
+      `<defs><marker id="${id}" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto">` +
+      `<path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>` +
+      `<path d="${d}" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" marker-end="url(#${id})"/></svg>`;
+  };
+
+  // beads sit exactly on the half-ellipse arc: x = pos, y from the ellipse equation
+  const factors = (r.context && r.context.factors) || [];
+  const beads = arc => factors.filter(f => f.arc === arc).map(f => {
+    const x = Math.min(Math.max(+f.pos || 0, 0), 1);
+    const h = Math.sqrt(Math.max(0, 1 - (2 * x - 1) ** 2));
+    const y = arc === 'top' ? 1 - h : h;
+    return `<span class="why-bead" ` +
+      `style="left:${(x * 100).toFixed(1)}%;top:${(y * 100).toFixed(1)}%">` +
+      `${icon(f)}<em>${esc(f.label)}</em></span>`;
+  }).join('');
+
+  if (r.why && r.why.length === 2 && r.cycle) {
+    html += `<div class="why-cycle why-${esc(style)}">` +
+      `<div class="why-arc top" aria-hidden="true"><span class="why-arc-label">${esc(r.cycle[0])}</span>${beads('top')}</div>` +
+      `<div class="why-arc bottom" aria-hidden="true"><span class="why-arc-label">${esc(r.cycle[1])}</span>${beads('bottom')}</div>` +
+      card(r.why[0]) +
+      `<div class="why-arrows" aria-hidden="true">` +
+        `<div class="why-arrow fwd"><span>${esc(r.cycle[0])}</span>${arcArrow('fwd')}</div>` +
+        `<div class="why-arrow back">${arcArrow('back')}<span>${esc(r.cycle[1])}</span></div>` +
+      `</div>` +
+      card(r.why[1]) +
+      `</div>`;
+    if (r.context && style !== 'v1') {  // v1 has no environment frame
+      // chip row: shown when the arcs are not (v1, phones)
+      const chips = factors.length ? `<div class="why-env-factors">` +
+        factors.map(f => `<span class="why-env-chip">${icon(f)}${esc(f.label)}</span>`).join('') + `</div>` : '';
+      html = `<div class="why-env why-env-${esc(style)}">` +
+        `<span class="why-env-label">${icon(r.context)}${esc(r.context.label)}</span>` +
+        html + chips + `</div>`;
+    }
+  } else if (r.why && r.why.length) {
+    html += `<div class="why-cycle why-${esc(style)}">${r.why.map(card).join('')}</div>`;
+  }
+  el.innerHTML = html;
 }
 
 // ── Research ───────────────────────────────────────────────
-// Schema: research.json { thrusts:[{title, summary, pubs:[id]}] }
+// Schema: research.json { thrusts:[{title, icon?, summary?, pubs:[id]}] }
+// Thrusts follow the two cards (Humans as Inspiration / Humans as the Purpose).
 // Paper ids refer to ../data/publications.json
 function renderResearch(r, pubs) {
   const el = document.getElementById('research-content');
@@ -113,10 +181,10 @@ function renderResearch(r, pubs) {
   const thrusts = (r.thrusts || []).map((t, i) => `
 <div class="thrust">
   <div class="thrust-head">
-    <span class="thrust-num">${i + 1}</span>
+    <span class="thrust-num">${t.icon ? `<i class="${esc(t.icon)}" aria-hidden="true"></i>` : i + 1}</span>
     <h3>${esc(t.title)}</h3>
   </div>
-  <p class="thrust-summary">${esc(t.summary)}</p>
+  ${t.summary ? `<p class="thrust-summary">${esc(t.summary)}</p>` : ''}
   <div class="paper-grid">${lookup(t.pubs).map(paperCard).join('')}</div>
 </div>`).join('');
 

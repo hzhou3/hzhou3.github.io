@@ -1,15 +1,52 @@
 {
-    "vision": "We build AI-powered wearable systems to understand human health and behavior in everyday life. Our work spans machine learning methods and low-cost sensing prototypes that transform raw signals into meaningful insights, helping people improve their daily lives.",
+    "why": [
+      {
+        "title": "Learning from Humans",
+        "role": "Humans as Inspiration",
+        "icon": "fa-solid fa-person-rays",
+        "text": "How can insights into human physiology, biomechanics, and behavior inspire new sensing technologies and intelligent systems?",
+        "tags": [
+          { "icon": "fa-solid fa-microchip",   "label": "Sensors" },
+          { "icon": "fa-solid fa-robot",       "label": "Robots" },
+          { "icon": "fa-solid fa-brain",       "label": "Intelligence" }
+        ]
+      },
+      {
+        "title": "Building for Humans",
+        "role": "Humans as the Purpose",
+        "icon": "fa-solid fa-screwdriver-wrench",
+        "text": "How can we build intelligent systems that understand, adapt to, and learn from humans to improve everyday life?",
+        "tags": [
+          { "icon": "fa-solid fa-handshake", "label": "Interaction" },
+          { "icon": "fa-solid fa-house",     "label": "Daily Life" },
+          { "icon": "fa-solid fa-hospital",  "label": "Clinics" }
+        ]
+      }
+    ],
+    "whyStyle": "v1",
+    "cycle": ["New Technologies Inspired by Human Insights", "Human Interactions Reveal New Insights and Needs"],
+    "context": {
+      "icon": "fa-solid fa-earth-americas",
+      "label": "In real-world environments",
+      "factors": [
+        { "icon": "fa-solid fa-cloud-sun",      "label": "Noise, light & weather", "arc": "top",    "pos": 0.12 },
+        { "icon": "fa-solid fa-person-walking", "label": "Outdoors & on the move", "arc": "top",    "pos": 0.88 },
+        { "icon": "fa-solid fa-hospital",       "label": "Clinics & care",         "arc": "bottom", "pos": 0.92 },
+        { "icon": "fa-solid fa-house",          "label": "Homes & daily life",     "arc": "bottom", "pos": 0.78 },
+        { "icon": "fa-solid fa-briefcase",      "label": "Work & school",          "arc": "bottom", "pos": 0.22 },
+        { "icon": "fa-solid fa-people-group",   "label": "Social Settings",        "arc": "bottom", "pos": 0.08 }
+      ]
+    },
     "thrusts": [
     {
-      "title": "AI for Wearables",
-      "summary": "We develop efficient AI algorithms to turn multimodal wearables streams to reliable human-centered insights.",
-      "pubs": ["xmae", "sslotr", "aslring", "himae", "ts4h", "signquery"]
+      "title": "Humans as Inspiration",
+      "icon": "fa-solid fa-person-rays",
+      "pubs": ["xmae", "pressure", "sslotr"]
     },
     {
-      "title": "New Sensing Capacity",
-      "summary": "We unlock new sensing capabilities that open a fresh lens into human states.",
-      "pubs": ["pressure", "earco", "uwborient", "omniring", "bcghrv",  "earface"]
+      "title": "Humans as the Purpose",
+      "icon": "fa-solid fa-screwdriver-wrench",
+      "pubs": ["signquery", "aslring", "aids"]
     }
   ]
 }
