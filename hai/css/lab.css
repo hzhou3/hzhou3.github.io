@@ -576,7 +576,7 @@ a.join-card:hover .group-photo-placeholder {
   .why-cycle { grid-template-columns: 1fr; gap: 18px; }
   .why-arrows { flex-direction: row; justify-content: center; gap: 28px; }
   .why-arrow { flex-direction: row; gap: 8px; max-width: none; }
-  .why-arc-arrow { width: 60px; height: 22px; margin: 0 -14px; transform: rotate(90deg); }
+  .why-arc-arrow { width: 60px; height: 22px; margin: 0 -14px; transform: rotate(90deg) scaleY(-1); }  /* bulge outward: ( ) */
   .why-v2 { padding: 0; }
   .why-v2 .why-arc { display: none; }
   .why-v2 .why-arrows { display: flex; flex-direction: column; align-items: center; gap: 2px; }
