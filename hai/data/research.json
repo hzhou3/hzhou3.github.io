@@ -15,7 +15,7 @@
         "title": "Building for Humans",
         "role": "Humans as the Purpose",
         "icon": "fa-solid fa-screwdriver-wrench",
-        "text": "How can we build intelligent systems that understand, adapt to, and learn from humans to improve everyday life?",
+        "text": "How can we build intelligent systems that understand, adapt to, and earn the trust of humans to improve everyday life?",
         "tags": [
           { "icon": "fa-solid fa-handshake", "label": "Interaction" },
           { "icon": "fa-solid fa-house",     "label": "Daily Life" },
