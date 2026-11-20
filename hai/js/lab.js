@@ -92,7 +92,12 @@ function renderWelcome(r) {
   if (!el) return;
   const style = new URLSearchParams(location.search).get('why') || r.whyStyle || 'v1';
   const icon = c => c.icon ? `<i class="${esc(c.icon)}" aria-hidden="true"></i>` : '';
-  let html = r.vision ? `<p class="lab-vision-text">${esc(r.vision)}</p>` : '';
+  // *phrase* in the vision echoes the lab name (styled as .vision-name);
+  // \n in the vision is a line break on wide screens
+  const vision = esc(r.vision).replace(/\*(.+?)\*/g, '<span class="vision-name">$1</span>')
+    .replace(/\n/g, '<br class="vision-br"> ');
+  let html = r.vision ? `<p class="lab-vision-text">${vision}</p>` : '';
+  if (style === 'none') { el.innerHTML = html; return; }  // vision line only
   const card = w =>
     `<div class="why-card"><div class="why-head">` +
     (w.icon ? `<span class="why-icon">${icon(w)}</span>` : '') +
@@ -152,7 +157,7 @@ function renderWelcome(r) {
 
 // ── Research ───────────────────────────────────────────────
 // Schema: research.json { thrusts:[{title, icon?, summary?, pubs:[id]}] }
-// Thrusts follow the two cards (Humans as Inspiration / Humans as the Purpose).
+// Thrusts are research themes (e.g. AI in Health, Ubiquitous Computing, Assistive Computing).
 // Paper ids refer to ../data/publications.json
 function renderResearch(r, pubs) {
   const el = document.getElementById('research-content');
@@ -188,7 +193,9 @@ function renderResearch(r, pubs) {
   <div class="paper-grid">${lookup(t.pubs).map(paperCard).join('')}</div>
 </div>`).join('');
 
-  el.innerHTML = thrusts;
+  // up to two papers per theme: themes side by side as columns, papers stacked beneath
+  const columns = (r.thrusts || []).every(t => (t.pubs || []).length <= 2);
+  el.innerHTML = columns ? `<div class="thrust-row">${thrusts}</div>` : thrusts;
 }
 
 // ── People ─────────────────────────────────────────────────

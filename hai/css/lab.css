@@ -10,20 +10,34 @@ a.nav-name:hover { color: var(--accent-h); }
   padding: 52px 0 36px;
 }
 
-.lab-name {
-  font-size: 34px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  line-height: 1.25;
-  margin-bottom: 20px;
-}
-
 .lab-vision {
   font-size: 18px;
   line-height: 1.65;
   color: var(--text);
 }
-.lab-vision-text { margin-bottom: 18px; }
+/* the one-line vision, set in a display italic */
+.lab-vision-text {
+  margin-bottom: 18px;
+  font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 32px;  /* two balanced lines that fill the page width on desktop */
+  line-height: 1.25;
+  letter-spacing: -0.2px;
+  color: var(--text);
+  text-wrap: balance;
+}
+/* the lab name inside the vision line */
+.vision-name {
+  color: var(--utd-orange-dark);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--utd-orange);
+  text-decoration-skip-ink: none;
+  white-space: nowrap;  /* keep the name on one line */
+  text-decoration-thickness: 3.5px;
+  text-underline-offset: 7px;
+}
 
 /* learn ⇄ build cycle: two cards joined into a loop.
    Shared rules first; .why-v1 / .why-v2 hold the two designs (see renderWelcome). */
@@ -314,6 +328,24 @@ a.nav-name:hover { color: var(--accent-h); }
 /* ── Research ────────────────────────────────────────────── */
 .thrust { margin-bottom: 30px; }
 
+/* themes side by side as columns, each with its papers stacked beneath.
+   Subgrid shares the row tracks, so heads and cards line up across columns
+   (rows: head, paper, paper). */
+.thrust-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 16px;
+}
+.thrust-row .thrust {
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+  row-gap: 16px;
+  margin-bottom: 0;
+}
+.thrust-row .thrust-head { margin-bottom: -4px; }
+.thrust-row .paper-grid { display: contents; }
+
 .thrust-head {
   display: flex;
   align-items: center;
@@ -571,8 +603,10 @@ a.join-card:hover .group-photo-placeholder {
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 680px) {
   #welcome { padding: 34px 0 30px; }
-  .lab-name { font-size: 29px; }
   .lab-vision { font-size: 16.5px; }
+  .lab-vision-text { font-size: 29px; }
+  .vision-br { display: none; }
+  .vision-name { text-decoration-thickness: 2.5px; text-underline-offset: 5px; }
   .why-cycle { grid-template-columns: 1fr; gap: 18px; }
   .why-arrows { flex-direction: row; justify-content: center; gap: 28px; }
   .why-arrow { flex-direction: row; gap: 8px; max-width: none; }
@@ -594,6 +628,11 @@ a.join-card:hover .group-photo-placeholder {
   .recruit-box p { font-size: 15px; }
 
   /* phones: every card grid is two by two, like Our Research */
+  /* phones: one theme per row, its two papers side by side */
+  .thrust-row { grid-template-columns: 1fr; row-gap: 26px; }
+  .thrust-row .thrust { display: block; }
+  .thrust-row .thrust-head { margin-bottom: 12px; }
+  .thrust-row .paper-grid { display: grid; }
   .paper-grid,
   .photo-grid,
   .join-grid {
@@ -609,8 +648,4 @@ a.join-card:hover .group-photo-placeholder {
   .join-role { padding: 12px; font-size: 13.5px; line-height: 1.5; }
   .join-title { font-size: 14.5px; gap: 6px; }
   .join-subject code { white-space: normal; }
-}
-
-@media (max-width: 440px) {
-  .lab-name { font-size: 26px; }
 }

@@ -1,4 +1,5 @@
 {
+    "vision": "The human body is an endless source of inspiration, and we translate its insights into *human-aware intelligence* that empowers every person, regardless of age or ability, to live a healthier and more independent life.",
     "why": [
       {
         "title": "Learning from Humans",
@@ -23,7 +24,7 @@
         ]
       }
     ],
-    "whyStyle": "v1",
+    "whyStyle": "none",
     "cycle": ["New Technologies Inspired by Human Insights", "Human Interactions Reveal New Insights and Needs"],
     "context": {
       "icon": "fa-solid fa-earth-americas",
@@ -39,14 +40,19 @@
     },
     "thrusts": [
     {
-      "title": "Humans as Inspiration",
-      "icon": "fa-solid fa-person-rays",
-      "pubs": ["xmae", "pressure", "sslotr"]
+      "title": "AI in Health",
+      "icon": "fa-solid fa-heart-pulse",
+      "pubs": ["xmae", "earco"]
     },
     {
-      "title": "Humans as the Purpose",
-      "icon": "fa-solid fa-screwdriver-wrench",
-      "pubs": ["signquery", "aslring", "aids"]
+      "title": "Ubiquitous Computing",
+      "icon": "fa-solid fa-tower-broadcast",
+      "pubs": ["pressure", "sslotr"]
+    },
+    {
+      "title": "Assistive Computing",
+      "icon": "fa-solid fa-hands-asl-interpreting",
+      "pubs": ["signquery", "aslring"]
     }
   ]
 }
